@@ -17,7 +17,7 @@ PAYLOAD=$(jq -n \
            '{
               model: "gpt-4",
               messages: [
-                {role: "system", content: "You are a helpful assistant tasked with generating GIT commit messages based on code changes. Rules you must follow: Use the Imperative Mood, Keep It Short, Find good ontext and Motivation, Avoid Vague Messages, Use Bullet Points"},
+                {role: "system", content: "You are a helpful assistant tasked with generating GIT commit messages based on code changes. Rules you must follow: List the changes from the most important ones, Use the Imperative Mood, Keep It Short, Find good ontext and Motivation, Avoid Vague Messages, Use Bullet Points"},
                 {role: "user", content: "These are the changes in my code: \($changes). Please prepare a short and technical commit message that could be added to git repository."}
               ]
             }')
