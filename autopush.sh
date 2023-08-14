@@ -1,4 +1,7 @@
 #!/bin/bash
+# Load environment variables from .env file
+source .env
+
 git add .
 
 # Extract the changed files and their changes
