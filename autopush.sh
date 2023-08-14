@@ -5,7 +5,7 @@ source .env
 git add .
 
 # Extract the changed files and their changes
-CHANGES=$(git diff --name-status HEAD)
+CHANGES=$(git diff HEAD)
 
 # Format the changes to send to GPT-4
 FORMATTED_CHANGES=$(echo "$CHANGES" | sed ':a;N;$!ba;s/\n/; /g')
