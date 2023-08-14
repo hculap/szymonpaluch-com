@@ -8,21 +8,23 @@ git add .
 CHANGES=$(git diff HEAD)
 
 # Format the changes to send to GPT-4
-FORMATTED_CHANGES=$(echo "$CHANGES" | sed ':a;N;$!ba;s/\n/; /g')
+FORMATTED_CHANGES=$(echo "$CHANGES" | sed -E ':a;N;1,$!ba;s/\n/; /g')
+FORMATTED_CHANGES_JSON=$(echo "$CHANGES" | jq -R -s .)
 
 # Request payload for OpenAI API
-read -r -d '' PAYLOAD << EOM
-{
-  "model": "gpt-4",
-  "messages": [
-    {"role": "system", "content": "You are a helpful assistant tasked with generating commit messages based on code changes."},
-    {"role": "user", "content": "These are the changes in my code: $FORMATTED_CHANGES. Can you prepare a commit message for me?"}
-  ]
-}
-EOM
+PAYLOAD=$(jq -n \
+           --arg changes "$FORMATTED_CHANGES_JSON" \
+           '{
+              model: "gpt-4",
+              messages: [
+                {role: "system", content: "You are a helpful assistant tasked with generating GIT commit messages based on code changes. Rules you must follow: Use the Imperative Mood, Keep It Short, Find good ontext and Motivation, Avoid Vague Messages, Use Bullet Points"},
+                {role: "user", content: "These are the changes in my code: \($changes). Please prepare a short and technical commit message that could be added to git repository."}
+              ]
+            }')
+
 
 # Reading the API key from an environment variable
-API_KEY=$YOUR_OPENAI_API_KEY
+API_KEY=$OPENAI_API_KEY
 
 # Send the request to OpenAI's API and get the commit message suggestion
 RESPONSE=$(curl -s -X POST \
