@@ -224,5 +224,21 @@
           scrollArrow.style.visibility = 'hidden';
       });
     </script>
+    <script type="text/javascript">
+      // Function to get a specific query parameter's value
+      function getQueryParam(name) {
+          const results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.search);
+          return results ? decodeURIComponent(results[1]) : null;
+      }
+
+      // Get the UTM parameters and store them only if they are set
+      const utm_parameters = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+      for (let param of utm_parameters) {
+          const value = getQueryParam(param);
+          if (value) {
+              localStorage.setItem(param, value);
+          }
+      }
+    </script>
   </body>
 </html>

@@ -34,7 +34,26 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <script type="text/javascript">
-        window.location.href = "https://app.easycart.pl/checkout/45947452/kurs-inteligentna-fabryka-pomyslow";
+        // Retrieve UTM parameters from localStorage and append them if they exist
+        const utm_parameters = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+        const params = [];
+    
+        for (let param of utm_parameters) {
+            const value = localStorage.getItem(param);
+            if (value) {
+                params.push(param + '=' + encodeURIComponent(value));
+            }
+        }
+    
+        // Construct the redirect URL
+        let redirectUrl = "https://app.easycart.pl/checkout/45947452/kurs-inteligentna-fabryka-pomyslow";
+        
+        if (params.length > 0) {
+            redirectUrl += '?' + params.join('&');
+        }
+    
+        // Perform the redirect
+        window.location.href = redirectUrl;
     </script>
 </body>
 </html>
