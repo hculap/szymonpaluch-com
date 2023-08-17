@@ -1,7 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Redirecting...</title>
+    <title>Ładowanie...</title>
+    <style>
+    body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .spinner {
+        width: 4em;
+        height: 4em;
+        border: 0.5em solid rgba(0, 0, 0, 0.1);
+        border-left-color: #7a94ce;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    s}
+
+    </style>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -29,6 +55,7 @@
     <!-- End Meta Pixel Code -->       
 </head>
 <body>
+    <div class="spinner"></div>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGG767H"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -53,7 +80,9 @@
         }
     
         // Perform the redirect
-        window.location.href = redirectUrl;
+        setTimeout(function() {
+            window.location.href = redirectUrl;
+        }, 2000);
     </script>
 </body>
 </html>
