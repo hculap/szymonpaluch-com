@@ -103,6 +103,23 @@
       .author-name, .author-position {
           margin: 0;
       }
+      .iframe-container {
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+          margin: 0 auto; /* Center the container */
+      }
+
+      .iframe-container iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border: 0;
+      }
+
 
 
     </style>
@@ -165,40 +182,42 @@
         </section>
         <section class="flex row justify-content-lg-between">
           <div class="col-12">
-              <p class="mt-lg-3 mb-3 fs-2 fw-bold text-uppercase">
-                Czy kiedykolwiek chciałeś stworzyć coś wyjątkowego, ale czułeś paraliżującą blokadę twórczą? 
-              </p>  
-              <p class="mt-lg-3 mb-3 fs-3">
-                Czy presja zbliżających się terminów sprawiała, że ​​każda minuta była coraz krótsza, a pomysły zdawały się uciekać?
-              </p>  
-              <p class="mt-lg-3 mb-3 fs-3">  
-                Znam to uczucie doskonale! Nazywam się Szymon Paluch i na codzień pracuję jako strategiczny konsultant w branży IT współpracujący z klientami, aby pomóc im w pełni wykorzystać nowe technologie, takie jak Blockchain i AI.
-              </p>  
-              <p class="mt-lg-3 mb-3 fs-3">   
-                Oprócz codziennych obowiązków buduję silną markę eksperta w mediach społecznościowych, co sprawia, że mierzyłem się z tymi samymi wyzwaniami.
-              </p>  
-              <p class="mt-lg-3 mb-3 fs-3">   
-                Ale znalazłem sposób, łącząc kreatywność ludzkiego umysłu z mocą sztucznej inteligencji, aby przełamać te bariery.
-              </p>  
-              <p class="mt-lg-3 mb-3 fs-3">
-                Dziś chcę podzielić się z Tobą tą wiedzą, abyś mógł czerpać korzyści z najlepszych praktyk i innowacyjnych narzędzi.
-              </p>
-              <p class="mt-lg-6 mb-6 fw-bold fs-2">
-                Ale zanim pokaże Ci magię tego kursu, mam dla ciebie coś specjalnego.
-              </p>
-              <p class="mt-lg-3 mb-3 fs-3">
-                Przygotowałem coś specjalnie dla Ciebie! Jest to metoda którą wykorzytuję, zanim przystąpię do procesu planowania moich treści.
-              </p>
-              <p class="mt-lg-3 mb-3 fs-3">   
-                Wideo, które zaraz zobaczysz, przygotowałem specjalnie dla Ciebie i nie jest ono dostępne nigdzie indziej...  
-              </p>
-              <p class="mt-lg-3 mb-3 fs-3">   
-                Pokazuje ono tylko małą część tego, co mam dla Ciebie w zanadrzu w "Inteligentnej Fabryce Pomysłów". 
-              </p>
-              <p class="mt-lg-3 mb-3 fs-3">   
-                Zachęcam Cię do obejrzenia – to warte Twojego czasu.
-              </p>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/qxQIcDrre1E?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <p class="mt-lg-3 mb-3 fs-2 fw-bold text-uppercase">
+              Czy kiedykolwiek chciałeś stworzyć coś wyjątkowego, ale czułeś paraliżującą blokadę twórczą? 
+            </p>  
+            <p class="mt-lg-3 mb-3 fs-3">
+              Czy presja zbliżających się terminów sprawiała, że ​​każda minuta była coraz krótsza, a pomysły zdawały się uciekać?
+            </p>  
+            <p class="mt-lg-3 mb-3 fs-3">  
+              Znam to uczucie doskonale! Nazywam się Szymon Paluch i na codzień pracuję jako strategiczny konsultant w branży IT współpracujący z klientami, aby pomóc im w pełni wykorzystać nowe technologie, takie jak Blockchain i AI.
+            </p>  
+            <p class="mt-lg-3 mb-3 fs-3">   
+              Oprócz codziennych obowiązków buduję silną markę eksperta w mediach społecznościowych, co sprawia, że mierzyłem się z tymi samymi wyzwaniami.
+            </p>  
+            <p class="mt-lg-3 mb-3 fs-3">   
+              Ale znalazłem sposób, łącząc kreatywność ludzkiego umysłu z mocą sztucznej inteligencji, aby przełamać te bariery.
+            </p>  
+            <p class="mt-lg-3 mb-3 fs-3">
+              Dziś chcę podzielić się z Tobą tą wiedzą, abyś mógł czerpać korzyści z najlepszych praktyk i innowacyjnych narzędzi.
+            </p>
+            <p class="mt-lg-6 mb-6 fw-bold fs-2">
+              Ale zanim pokaże Ci magię tego kursu, mam dla ciebie coś specjalnego.
+            </p>
+            <p class="mt-lg-3 mb-3 fs-3">
+              Przygotowałem coś specjalnie dla Ciebie! Jest to metoda którą wykorzytuję, zanim przystąpię do procesu planowania moich treści.
+            </p>
+            <p class="mt-lg-3 mb-3 fs-3">   
+              Wideo, które zaraz zobaczysz, przygotowałem specjalnie dla Ciebie i nie jest ono dostępne nigdzie indziej...  
+            </p>
+            <p class="mt-lg-3 mb-3 fs-3">   
+              Pokazuje ono tylko małą część tego, co mam dla Ciebie w zanadrzu w "Inteligentnej Fabryce Pomysłów". 
+            </p>
+            <p class="mt-lg-3 mb-3 fs-3">   
+              Zachęcam Cię do obejrzenia – to warte Twojego czasu.
+            </p>
+            <div class="iframe-container">
+              <iframe src="https://www.youtube.com/embed/qxQIcDrre1E?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
           </div>
         </section>
         <section class="flex row justify-content-lg-between">
