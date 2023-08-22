@@ -5,7 +5,9 @@
     <title>KURS "Inteligentna Fabryka Pomysłów" | PRZEDSPRZEDAŻ | Szymon Paluch – Biznes Na Granicy Jutra</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
     <link href="./landing_marketing_files/styles.min.css" rel="stylesheet" id="sf-custom-css">
     <style>
       ::selection {
@@ -125,6 +127,51 @@
         background-color: #ffffff;
         border: 1px solid rgba(39, 40, 42, 0.125);
       }
+      .author-stars {
+        color: gold;
+      }
+      .modal {
+        display: none; // for centering purposes
+        align-items: center; // centering the modal vertically
+        justify-content: center; // centering the modal horizontally
+        top: 0; 
+        left: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto;
+        margin: 0px
+        background-color: rgba(0,0,0,0.7);
+
+      }
+
+      .modal-content {
+          position: relative;
+          margin: 50% auto; 
+          padding: 20px;
+          width: 80%;
+      }
+
+      video {
+          width: 100%; 
+          height: auto;
+      }
+
+      .close {
+          position: absolute;
+          right: 10px;
+          top: 0;
+          color: #aaa;
+          font-size: 28px;
+          font-weight: bold;
+          cursor: pointer;
+      }
+
+      .close:hover, .close:focus {
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+      }
+
 
     </style>
     <meta name="twitter:card" content="summary_large_image"></meta>
@@ -185,7 +232,7 @@
               Pożegnaj się z godzinami spędzonymi nad wymślaniem nowych pomysłami na treści.
             </h1>
             <p class="py-4 fs-2">
-              Poznaj <b>"Inteligentną Fabrykę Pomysłów"</b>, dzięki której tworzenie treści da Ci więcej energii do działania niż poranna kawa.
+              Poznaj <b>"Inteligentną Fabrykę Pomysłów"</b>, dzięki której poznasz narzędzia Sztucznej Inteligencji, a tworzenie treści da Ci więcej energii do działania niż poranna kawa.
             </p>
             <a href="#value" class="btn btn-primary btn-lg rounded-0 text-uppercase shadow">Odblokuj swoją kreatwyność</a>
           </div>
@@ -197,19 +244,22 @@
               Czy kiedykolwiek chciałeś stworzyć coś wyjątkowego, ale czułeś paraliżującą blokadę twórczą? 
             </h2>  
             <p class="mt-4 mb-4 fs-2">
-              Czy presja zbliżających się terminów sprawiała, że ​​każda minuta była coraz krótsza, a pomysły zdawały się uciekać?
+              Czy presja <b>zbliżających się terminów</b> sprawiała, że ​​każda minuta była coraz krótsza, a pomysły zdawały się uciekać?
             </p>  
             <p class="mt-4 mb-4 fs-2">  
-              Znam to uczucie doskonale! Nazywam się Szymon Paluch i na codzień pracuję jako strategiczny konsultant w branży IT współpracujący z klientami, aby pomóc im w pełni wykorzystać nowe technologie, takie jak Blockchain i AI.
+              Znam to uczucie doskonale!
+            </p>  
+            <p class="mt-4 mb-4 fs-2">  
+              Nazywam się <b>Szymon Paluch</b> i na codzień pracuję jako <b>niezależny konsultant strategiczny</b> i pomagam moim klientom w pełni wykorzystać nowe technologie, takie jak <b>Blockchain, Web3, No-code czy AI</b>.
             </p>  
             <p class="mt-4 mb-4 fs-2">   
-              Oprócz codziennych obowiązków buduję silną markę eksperta w mediach społecznościowych, co sprawia, że mierzyłem się z tymi samymi wyzwaniami.
+              Oprócz codziennych obowiązków buduję również swoją <b>markę eksperta</b> w mediach społecznościowych, co sprawia, że nieraz mierzyłem się z tymi samymi wyzwaniami braku czasu i pomysłów co Ty.
             </p>  
             <p class="mt-4 mb-4 fs-2">   
-              Ale znalazłem sposób, łącząc kreatywność ludzkiego umysłu z mocą sztucznej inteligencji, aby przełamać te bariery.
+              Ale przełamałem te bariery i <b>znalazłem sposób</b>, łączący kreatywność ludzkiego umysłu z mocą sztucznej inteligencji!
             </p>  
             <p class="mt-4 mb-4 fs-2">
-              Dziś chcę podzielić się z Tobą tą wiedzą, abyś mógł czerpać korzyści z najlepszych praktyk i innowacyjnych narzędzi.
+              Dziś chcę podzielić się z Tobą moją <b>wiedzą i doświadczeniem</b>, abyś i Ty mógł <b>czerpać korzyści</b> z innowacyjnych narzędzi i moich sprawdzonych praktyk.
             </p>
           </div>
           <div class="col-12 col-lg-6">
@@ -217,20 +267,32 @@
               Ale zanim pokaże Ci magię tego kursu, mam dla ciebie coś specjalnego.
             </h3>
             <p class="mt-4 mb-4 fs-2">
-              Przygotowałem coś specjalnie dla Ciebie! Jest to metoda którą wykorzytuję, zanim przystąpię do procesu planowania moich treści.
+              Przygotowałem coś <b>specjalnie dla Ciebie!</b>
+            </p>
+            <p class="mt-4 mb-4 fs-2">  
+              Jest to metoda którą wykorzytuję, aby ocenić różne pomysły (te biznesowe jak i na nowe treści).
             </p>
             <p class="mt-4 mb-4 fs-2">   
-              Wideo, które zaraz zobaczysz, przygotowałem specjalnie dla Ciebie i nie jest ono dostępne nigdzie indziej...  
+              <b>Wideo, które zaraz zobaczysz</b>, przygotowałem specjalnie dla Ciebie i <b>nie jest ono dostępne nigdzie indziej</b>...  
             </p>
             <p class="mt-4 mb-4 fs-2">   
-              Pokazuje ono tylko małą część tego, co mam dla Ciebie w zanadrzu w "Inteligentnej Fabryce Pomysłów". 
+              Pokazuje ono tylko małą część tego, co mam dla Ciebie w zanadrzu w "<b>Inteligentnej Fabryce Pomysłów</b>". 
             </p>
             <p class="mt-4 mb-4 fs-2">   
-              Zachęcam Cię do obejrzenia – to warte Twojego czasu.
+              Zachęcam Cię do obejrzenia – to <b>warte Twojego czasu</b>.
             </p>
           </div>
           <div class="col-12 col-lg-6">  
-            <img src="./landing_marketing_files/yt_cover.png" srcset="./landing_marketing_files/yt_cover.png 2x" alt="" class="img img-fluid mx-auto d-block border border-dark-3 shadow">
+            <img id="value-image" src="./landing_marketing_files/yt_cover.png" srcset="./landing_marketing_files/yt_cover.png 2x" alt="" class="img img-fluid mx-auto d-block border border-dark-3 shadow">
+            <div id="videoModal" class="modal">
+              <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <video id="video" controls>
+                      <source src="./landing_marketing_files/sample.mp4" type="video/mp4">
+                      Twoja przeglądarka nie obsługuje elemntu wideo.
+                  </video>
+              </div>
+          </div>
           </div>
         </section>
         <!-- Course Plan -->
@@ -244,10 +306,10 @@
                   Poznaj "Inteligentną Fabrykę Pomysłów"
               </h2> 
               <p class="mt-4 mb-4 fs-2">
-                Przygotuj się na podróż inną niż wszystkie!
+                Przygotuj się na <b>podróż inną niż wszystkie</b>!
               </p> 
               <p class="mt-4 mb-4 fs-2">
-                Zagłębiając się w <b>"Inteligentną Fabrykę Pomysłów"</b>, znajdziesz skrupulatnie opracowane moduły zaprojektowane tak, aby poprawić każdy aspekt Twojej procesu w tworzenie treści.
+                Uczestniczac w <b>"Inteligentną Fabrykę Pomysłów"</b>, znajdziesz skrupulatnie opracowane moduły zaprojektowane tak, aby dać Ci pełne <b>zrozumienie narzędzi AI v</b>i poprawić każdy aspekt Twojej <b>procesu w tworzenie treści</b>.
               </p>
               <p class="mt-8 mb-4 fs-2">
                 <a href="#lesson-1" class="btn btn-primary btn-lg rounded-0 text-uppercase shadow">Zobacz co Cię czeka w kursie</a>
@@ -261,7 +323,7 @@
               </h3>
               <dl class="fs-3">
                   <dt></dt>
-                  <dd>Instruktor przedstawia siebie i swoje doświadczenie w tej dziedzinie. Przedstawia, o czym jest kurs, dla kogo jest przeznaczony i jaki problem ma rozwiązać. Moduł ten zawiera również zarys struktury kursu i tego, czego uczestnicy mogą się spodziewać.</dd>
+                  <dd>Na początku poznasz swojego instruktora i jego doświadczenie w tej dziedzinie. Przedstawia on, czym jest ten kurs, dla kogo jest przeznaczony i jaki problem ma rozwiązać. Moduł ten zawiera również zarys struktury kursu i tego, czego możesz mogą się w nim spodziewać.</dd>
                   
                   <dt>🕣 Czas trwania</dt>
                   <dd>5 minut</dd>
@@ -272,7 +334,7 @@
                   <dt>🎯 Kluczowe punkty</dt>
                   <dd>
                       <ul>
-                          <li>Przedstawienie instruktora i jego/jej referencji.</li>
+                          <li>Przedstawienie instruktora i jego referencji.</li>
                           <li>Omówienie celów kursu i jego struktury.</li>
                       </ul>
                   </dd>
@@ -286,19 +348,20 @@
               </h3>
               <dl class="fs-3">
                   <dt></dt>
-                  <dd>Czego można się spodziewać po tym kursie i czym różni się on od innych materiałów dostępnych na rynku?</dd>
+                  <dd>Zrozumiesz czego można się spodziewać po tym kursie i czym różni się on od innych materiałów dostępnych na rynku.</dd>
                   
                   <dt>🕣 Czas trwania</dt>
                   <dd>2 minut</dd>
                   
                   <dt>📚 Czego się nauczysz</dt>
-                  <dd>Czego można się spodziewać po tym kursie i czym różni się on od innych materiałów dostępnych na rynku?.</dd>
+                  <dd>Co czeka Cię w najbliższych godzinach i jak dobrze przygotować się do nauki oraz wdrożenia wiedzy.</dd>
           
                   <dt>🎯 Kluczowe punkty</dt>
                   <dd>
                       <ul>
                           <li>Jak ten kurs różni się od innych istniejących materiałów.</li>
                           <li>Dlaczego ten kurs jest wyjątkowy i dlaczego uczestnik powinien go wdrożyć.</li>
+                          <li>Jak przygotować się do pracy z kursem.</li>
                       </ul>
                   </dd>
               </dl>
@@ -311,13 +374,13 @@
               </h3>
               <dl class="fs-3">
                     <dt></dt>
-                    <dd>Przegląd tego, czym jest matryca pomysłów na treść, jej zastosowania i zasady, które za nią stoją.</dd>
+                    <dd>Dowiesz się czym jest matryca pomysłów na treść, jakie są jej zastosowania i zasady, które za nią stoją.</dd>
                     
                     <dt>🕣 Czas trwania</dt>
                     <dd>7 minut</dd>
                     
                     <dt>📚 Czego się nauczysz</dt>
-                    <dd>Podstawowe zrozumienie matrycy pomysłów na treść i jej roli w tworzeniu treści.</dd>
+                    <dd>Posiądziesz podstawowe zrozumienie matrycy pomysłów na treść i jej roli w tworzeniu treści</dd>
             
                     <dt>🎯 Kluczowe punkty</dt>
                     <dd>
@@ -325,6 +388,7 @@
                             <li>Zrozumienie koncepcji matrycy pomysłów dotyczących treści.</li>
                             <li>Zastosowania i korzyści matrycy pomysłów dotyczących treści.</li>
                             <li>Zasady tworzenia matrycy pomysłów dotyczących treści.</li>
+                            <li>Przykładowa matryca pmoysłów na treści</li>
                         </ul>
                     </dd>
                 </dl>
@@ -337,7 +401,7 @@
               </h3>
               <dl class="fs-3">
                   <dt></dt>
-                  <dd>Dogłębne spojrzenie na różne elementy matrycy pomysłów na treści i sposób, w jaki łączą się one w celu generowania unikalnych pomysłów.</dd>
+                  <dd>Zyskasz pełne spojrzenie na różne elementy matrycy pomysłów na treści i sposób, w jaki łączą się one w celu generowania unikalnych pomysłów.</dd>
                   
                   <dt>🕣 Czas trwania</dt>
                   <dd>10 minut</dd>
@@ -351,6 +415,7 @@
                           <li>Analiza różnych elementów Matrycy Pomysłów na Treści.</li>
                           <li>Jak wykorzystać te elementy do generowania unikalnych pomysłów.</li>
                           <li>Praktyczne przykłady wykorzystania matrycy pomysłów na treści.</li>
+                          <li>Tworzenie własnej matrycy.</li>
                       </ul>
                   </dd>
               </dl>
@@ -363,7 +428,7 @@
               </h3>
               <dl class="fs-3">
                   <dt></dt>
-                  <dd>Wyjaśnienie, czym jest ChatGPT, jak działa i jak można go wykorzystać do generowania pomysłów na treści.</dd>
+                  <dd>Dowiesz się czym jest ChatGPT, jak działa i jak efektywnie można go wykorzystać do generowania pomysłów na treści.</dd>
                   
                   <dt>🕣 Czas trwania</dt>
                   <dd>10 minut</dd>
@@ -375,7 +440,7 @@
                   <dd>
                       <ul>
                           <li>Zrozumienie technologii stojącej za ChatGPT.</li>
-                          <li>Zrozumienie działania ChatGPT.</li>
+                          <li>Zrozumienie dobrych praktyk korzystania ChatGPT.</li>
                           <li>Zastosowania ChatGPT w tworzeniu treści.</li>
                       </ul>
                   </dd>
@@ -385,24 +450,24 @@
           <div class="col-12 col-lg-6 p-3">
             <div class="card shadow p-6">
               <h3 class="mt-lg-6 mb-6 fw-bold fs-2">
-                💡 Lekcja 6: Matrycy Pomysłów na Treść na stwórz z ChatGPT
+                💡 Lekcja 6: Matrycy Pomysłów na Treść wspierana przez ChatGPT
               </h3>
               <dl class="fs-3">
                 <dt></dt>
-                <dd>Szczegółowy opis korzystania z ChatGPT w połączeniu z Content Ideas Matrix do tworzenia angażujących i unikalnych pomysłów na treści.</dd>
+                <dd>Poznasz szczegółowy opis korzystania z ChatGPT w połączeniu z Matrycą Pomysłów na Treści do tworzenia angażujących i unikalnych tematów.</dd>
                 
                 <dt>🕣 Czas trwania</dt>
                 <dd>10 minut</dd>
                 
                 <dt>📚 Czego się nauczysz</dt>
-                <dd>Praktyczne zrozumienie integracji ChatGPT i Content Ideas Matrix w celu efektywnego tworzenia treści.</dd>
+                <dd>Praktyczne zrozumienie integracji ChatGPT i Matrycy Pomysłów na Treści w celu efektywnego tworzenia treści.</dd>
         
                 <dt>🎯 Kluczowe punkty</dt>
                 <dd>
                     <ul>
-                        <li>Integracja ChatGPT i Content Ideas Matrix.</li>
-                        <li>Praktyczny przykład tworzenia treści przy użyciu ChatGPT i Content Idea Matrix.</li>
-                        <li>Najlepsze praktyki podczas korzystania z ChatGPT i Content Idea Matrix.</li>
+                        <li>Integracja ChatGPT i Matrycy Pomysłów na Treści.</li>
+                        <li>Praktyczny przykład tworzenia treści przy użyciu ChatGPT i Matrycy Pomysłów na Treści.</li>
+                        <li>Najlepsze praktyki podczas korzystania z ChatGPT i Matrycy Pomysłów na Treści.</li>
                     </ul>
                 </dd>
               </dl>
@@ -411,11 +476,11 @@
           <div class="col-12 col-lg-6 p-3">
             <div class="card shadow p-6">
               <h3 class="mt-lg-6 mb-6 fw-bold fs-2">
-                💡 Lekcja 7: Wprowadzenie do automatyzacji przy użyciu Make, Airtable i OpenAI API
+                💡 Lekcja 7: Wprowadzenie do automatyzacji
               </h3>
               <dl class="fs-3">
                   <dt></dt>
-                  <dd>Omówienie sposobu wykorzystania tych narzędzi do automatyzacji procesu generowania treści, wraz z przykładami z życia wziętymi.</dd>
+                  <dd>Zobaczysz sposoby wykorzystania narzędzi no-code do automatyzacji procesu generowania treści, wraz z prealnymi rzykładami.</dd>
                   
                   <dt>🕣 Czas trwania</dt>
                   <dd>15 minut</dd>
@@ -437,24 +502,24 @@
           <div class="col-12 col-lg-6 p-3">
             <div class="card shadow p-6">
               <h3 class="mt-lg-6 mb-6 fw-bold fs-2">
-                💡 Lekcja 8: Stwórz własną Automatyczną Matrycę Pomysłów
+                💡 Lekcja 8: Tworzymy własną Inteligentną Fabrykę Pomysłów
               </h3>
               <dl class="fs-3">
                   <dt></dt>
-                  <dd>Przewodnik krok po kroku dotyczący konfigurowania zautomatyzowanego systemu generowania treści przy użyciu OpenAI API, Make i Airtable.</dd>
+                  <dd>PRzejdziesz krok po kroku przez proces konfigurowania zautomatyzowanego systemu generowania treści przy użyciu OpenAI API, Make i Airtable.</dd>
                   
                   <dt>🕣 Czas trwania</dt>
                   <dd>15 minut</dd>
                   
                   <dt>📚 Czego się nauczysz</dt>
-                  <dd>Jak skonfigurować zautomatyzowany system generowania treści przy użyciu omawianych narzędzi.</dd>
+                  <dd>Jak połączyć wszystkie poznane wcześniej narzędzia i koncepty w celu stworzenia własnego generatora ponysłów.</dd>
           
                   <dt>🎯 Kluczowe punkty</dt>
                   <dd>
                       <ul>
                           <li>Proces konfiguracji systemu automatycznego generowania treści.</li>
                           <li>Rozwiązywanie typowych problemów.</li>
-                          <li>Najlepsze praktyki zarządzania i konserwacji systemu.</li>
+                          <li>Najlepsze praktyki korzystania i modernizowania stworzonego systemu.</li>
                       </ul>
                   </dd>
               </dl>
@@ -463,11 +528,11 @@
           <div class="col-12 col-lg-6 p-3">
             <div class="card shadow p-6">
               <h3 class="mt-lg-6 mb-6 fw-bold fs-2">
-                  💡 Lekcja 9: Jak dalej możesz wykorzystać własną Matrycę Pomysłów
+                  💡 Lekcja 9: Jak dalej możesz wykorzystać swoją Inteligentną Fabrykę Ponysłów
               </h3>
               <dl class="fs-3">
                   <dt></dt>
-                  <dd>Podsumowanie kursu, jego kluczowe wnioski i omówienie potencjalnych kolejnych kroków dla uczniów.</dd>
+                  <dd>ZObaczysz podsumowanie kursu, jego kluczowe wnioski i omówienie potencjalnych kolejnych kroków dla studentów.</dd>
                   
                   <dt>🕣 Czas trwania</dt>
                   <dd>5 minut</dd>
@@ -480,7 +545,7 @@
                       <ul>
                           <li>Podsumowanie kursu i jego kluczowe wnioski.</li>
                           <li>Potencjalne sposoby wykorzystania wiedzy zdobytej podczas kursu.</li>
-                          <li>Omówienie potencjalnych kolejnych kroków dla studentów.</li>
+                          <li>Omówienie potencjalnych kolejnych kroków dla studenta.</li>
                       </ul>
                   </dd>
               </dl>
@@ -497,10 +562,10 @@
                 </h2>
                   
                 <p class="mt-lg-4 mb-4 fs-2">
-                    Czy kiedykolwiek czułeś się przeciążony, próbując stale wymyślać świeże i unikalne treści?
+                    Czy kiedykolwiek czułeś się przeciążony, próbując stale <b>wymyślać świeże i unikalne treści</b>?
                 </p>
                 <p class="mt-lg-4 mb-4 fs-2">
-                  Rozumiem to doskonale i stworzyłem ten kurs, by Ci pomóc.
+                  Rozumiem to doskonale i stworzyłem ten kurs, <b>by Ci pomóc</b>.
                 </p>
           
                 <h3 class="mt-lg-3 mb-3 fs-2">
@@ -508,11 +573,11 @@
                 </h3>
           
                 <ul class="mt-lg-3 mb-3 fs-2">
-                    <li>Freelancerzy chcący usprawnić proces tworzenia treści</li>
-                    <li>Właściciele firm potrzebujący stałego dopływu świeżych pomysłów</li>
-                    <li>Specjaliści ds. marketingu poszukujący nowych narzędzi</li>
-                    <li>Blogerzy, vlogerzy i podcastersi, którzy chcą zachować swój autentyczny głos</li>
-                    <li>Osoby budujące swoją markę, które chcą tworzyć treść, która naprawdę rezonuje z ich publicznością</li>
+                    <li><b>Freelancerzy</b> chcący usprawnić proces tworzenia treści</li>
+                    <li><b>Właściciele firm</b> potrzebujący stałego dopływu świeżych pomysłów</li>
+                    <li><b>Specjaliści ds. marketingu</b> poszukujący nowych narzędzi</li>
+                    <li><b>Blogerzy, vlogerzy i podcasterzy</b>, którzy chcą zachować swój autentyczny głos</li>
+                    <li><b>Osoby budujące swoją markę</b>, które chcą tworzyć treść, która naprawdę rezonuje z ich publicznością</li>
                 </ul>
               </div>
               <div class="col-12 col-lg-6">
@@ -527,16 +592,16 @@
                     Jakie korzyści przyniesie Ci ten kurs?
                 </h2>
                 <p class="mt-lg-4 mb-4 fs-2">
-                    Wyobraź sobie, że nie musisz już spędzać godzin na myśleniu o nowych pomysłach na treść.
+                    Wyobraź sobie, że <b>nie musisz już spędzać godzin</b> na myśleniu o nowych pomysłach na treść.
                 </p>
                 <p class="mt-lg-4 mb-4 fs-2">
-                  Zamiast tego, masz narzędzia i strategie, które sprawiają, że cały proces staje się łatwiejszy, szybszy i bardziej efektywny.
+                  Zamiast tego, masz <b>narzędzia i strategie</b>, które sprawiają, że cały proces staje się łatwiejszy, szybszy i bardziej efektywny.
                 </p>
                 <p class="mt-lg-4 mb-4 fs-2">
-                  Dodatkowo, dzięki temu kursowi nauczysz się korzystać z narzędzi opartych na sztucznej inteligencji, które odmienią Twoje podejście do tworzenia treści.
+                  Dodatkowo, dzięki temu kursowi nauczysz się korzystać <b>z narzędzi opartych na sztucznej inteligencji</b>, które odmienią Twoje podejście do tworzenia treści.
                 </p>
                 <p class="mt-lg-4 mb-4 fs-2">
-                  Brzmi zachęcająco? Zapraszam do kursu!
+                  <b>Brzmi zachęcająco? Zapraszam do kursu!</b>
                 </p>
               </div>
               <div class="col-12 col-lg-6">
@@ -560,9 +625,9 @@
             <div class="flex row justify-content-lg-between align-content-stretch">
               <div class="col-12 col-lg-4 fs-3 mb-4 p-4">
                 <div class="card shadow p-4">
-                  <p class="fs-4">★★★★★</p>
-                  <blockquote class="fs-4">"Szymon wykonał genialną robotę, przekazując skomplikowaną wiedzę w prosty sposób, zrozumiały dla osób nietechnicznych.."</blockquote>
-                  <div class="author-info">
+                  <p class="fs-4 author-stars mb-2">★★★★★</p>
+                  <blockquote class="fs-4"><i>"Szymon wykonał genialną robotę, przekazując skomplikowaną wiedzę w prosty sposób, zrozumiały dla osób nietechnicznych.."</i></blockquote>
+                  <div class="author-info mt-2">
                       <img src="./landing_marketing_files/student1.png" alt="Łukasz Kucha" class="author-photo">
                       <div>
                           <p class="author-name fs-3">Łukasz Kucha</p>
@@ -573,9 +638,9 @@
               </div>
               <div class="col-12 col-lg-4 fs-3 mb-3 p-4">
                 <div class="card shadow p-4">
-                  <p class="fs-4">★★★★★</p>
-                  <blockquote class="fs-4">"Kurs super, informacji dużo, bardzo dużo i treściwej, wymaga masy przemysleń..."</blockquote>
-                  <div class="author-info">
+                  <p class="fs-4 author-stars mb-2">★★★★★</p>
+                  <blockquote class="fs-4"><i>"Kurs super, informacji dużo, bardzo dużo i treściwej, wymaga masy przemysleń..."</i></blockquote>
+                  <div class="author-info mt-2">
                       <div class="author-photo"></div>
                       <div>
                           <p class="author-name fs-3">Krzysztof Goertz</p>
@@ -586,9 +651,9 @@
               </div>
               <div class="col-12 col-lg-4 fs-3 mb-3 p-4">
                 <div class="card shadow p-4">
-                  <p class="fs-4">★★★★★</p>
-                  <blockquote  class="fs-4">"Szymon potrafi tłumaczyć zawiłe rzeczy w prosty sposób a swoje opinie klarownie argumentuje..."</blockquote>
-                  <div class="author-info">
+                  <p class="fs-4 author-stars mb-2">★★★★★</p>
+                  <blockquote  class="fs-4"><i>"Szymon potrafi tłumaczyć zawiłe rzeczy w prosty sposób a swoje opinie klarownie argumentuje..."</i></blockquote>
+                  <div class="author-info mt-2">
                       <img src="./landing_marketing_files/student3.png" alt="Łukasz Kaczmarek" class="author-photo">
                       <div>
                           <p class="author-name fs-3">Łukasz Kaczmarek</p>
@@ -599,9 +664,9 @@
               </div>
             <div class="col-12 col-lg-4 fs-3 mb-3 p-4">
               <div class="card shadow p-4">
-                <p class="fs-4">★★★★★</p>
-                <blockquote  class="fs-4">"Wiedza jak i zaangażowanie w pomocy na jak najwyższym poziomie."</blockquote>
-                <div class="author-info">
+                <p class="fs-4 author-stars mb-2">★★★★★</p>
+                <blockquote  class="fs-4"><i>"Wiedza jak i zaangażowanie w pomocy na jak najwyższym poziomie."</i></blockquote>
+                <div class="author-info mt-2">
                     <img src="./landing_marketing_files/student4.png" alt="Krystian Buras" class="author-photo">
                     <div>
                         <p class="author-name fs-3">Krystian Buras</p>
@@ -612,22 +677,22 @@
             </div>
             <div class="col-12 col-lg-4 fs-3 mb-3 p-4">
               <div class="card shadow p-4">
-                <p class="fs-4">★★★★★</p>
-                <blockquote class="fs-4">"Bardzo wartościowy kurs, świetnie ułożony tematycznie, odpowiednio wyważony pomiędzy wiedzą teoretyczną, praktyką..."</blockquote>
-                <div class="author-info">
+                <p class="fs-4 author-stars mb-2">★★★★★</p>
+                <blockquote class="fs-4"><i>"Bardzo wartościowy kurs, świetnie ułożony tematycznie, odpowiednio wyważony pomiędzy wiedzą teoretyczną, praktyką..."</i></blockquote>
+                <div class="author-info mt-2">
                     <img src="./landing_marketing_files/student5.jpeg" alt="Łukasz Pach" class="author-photo">
                     <div>
                         <p class="author-name fs-3">Łukasz Pach</p>
-                        <p class="author-position fs-4">CEO @ ADream</p>
+                        <p class="author-position fs-4">CEO @ <b>ADream</b></p>
                     </div>
                 </div>
               </div>
             </div>
             <div class="col-12 col-lg-4 fs-3 mb-3 p-4">
               <div class="card shadow p-4">
-                <p class="fs-4">★★★★★</p>
-                <blockquote class="fs-4">"Szymon to praktyk o podejściu, na którym zależy każdemu przedsiębiorcy poszukującemu partnerów biznesowych."</blockquote>
-                <div class="author-info">
+                <p class="fs-4 author-stars mb-2">★★★★★</p>
+                <blockquote class="fs-4 mb-2"><i>"Szymon to praktyk o podejściu, na którym zależy każdemu przedsiębiorcy poszukującemu partnerów biznesowych."</i></blockquote>
+                <div class="author-info mt-2">
                     <img src="./landing_marketing_files/student6.png" alt="Grzego Gracz" class="author-photo">
                     <div>
                         <p class="author-name fs-3">Grzegorz Gracz</p>
@@ -646,10 +711,10 @@
                 oraz swojego przewodnika po świecie nowoczesnych technologii
               </h2>
               <p class="mt-lg-4 mb-4 fs-2">
-                  Jestem przedsiębiorcą technologicznym z niemal 10-letnim doświadczeniem.
+                Jestem <b>przedsiębiorcą technologicznym z niemal 10-letnim doświadczeniem</b>.
               </p>
               <p class="mt-lg-4 mb-4 fs-2">
-                W roli strategicznego konsultanta pomagam firmom wdrażać najnowocześniejsze technologie, aby zdobyć przewagę na rynku - głównie Blockchain, Web3, AI i automatyzację bez kodu.
+                W roli strategicznego konsultanta pomagam <b>firmom wdrażać najnowocześniejsze technologie</b>, aby zdobyć przewagę na rynku - głównie <b>AI, Blockchain, Web3, NFT i automatyzację No-Code</b>.
               </p>
                 <p class="mt-lg-4 mb-4 fs-2">
                   Tworzyłem innowacje dla takich firm jak: 
@@ -662,10 +727,10 @@
 
                 </p>
                 <p class="mt-lg-4 mb-4 fs-2">
-                  Regularnie prowadzę szkolenia i wystąpienia publiczne, nie raz przed publicznością liczącą setki osób. 
+                  <b>Regularnie prowadzę szkolenia i wystąpienia publiczne</b>, nie raz przed publicznością liczącą setki osób. 
                 </p>
                 <p class="mt-lg-4 mb-4 fs-2">
-                  Jestem częstym gościem w podcastach i panelach dyskusyjnych.
+                  Jestem częstym gościem w <b>podcastach i panelach dyskusyjnych</b>.
                 </p>
             </div>
             <div class="col-12 col-lg-6 pb-4">
@@ -676,19 +741,19 @@
         <section class="flex row justify-content-lg-between align-content-stretch py-10 py-lg-20 border-bottom border-dark-3">
           <div class="col-12">
             <p class="mt-lg-4 mt-4 fs-2">
-              Poczekaj To nie wszystko. Dołączając teraz otrzymasz w pakiecie również
+              <b>Poczekaj To nie wszystko.</b> Dołączając teraz otrzymasz w pakiecie również
             </p>
             <h2 class="display-8 text-uppercase fs-1 pb-6">
               4 nisamowite bonusy
             </h2>
             <p class="mt-lg-4 mb-4 fs-2">
-                Każdy kurs daje wiedzę, ale my idziemy o krok dalej.
+                Każdy kurs daje wiedzę, ale <b>my idziemy o krok dalej</b>.
             </p>
             <p class="mt-lg-4 mb-4 fs-2">
-                Oprócz głównych modułów "Inteligentnej Fabryki Pomysłów", otrzymasz także ekskluzywne bonusy, które podniosą Twoją efektywność i kreatywność na zupełnie nowy poziom.
+                Oprócz głównych modułów "Inteligentnej Fabryki Pomysłów", otrzymasz także <b>wartościowe bonusy</b>, które podniosą Twoją efektywność i kreatywność na zupełnie nowy poziom.
             </p>
             <p class="mt-lg-4 mb-4 fs-2">    
-                Zobacz, jakie niespodzianki przygotowaliśmy dla Ciebie:
+                <b>Zobacz, jakie niespodzianki przygotowałem dla Ciebie</b>:
             </p>
           </div>
           <div class="col-12 col-lg-6 mb-4 p-3">
@@ -701,7 +766,7 @@
                 <dd>Ten cyfrowy przewodnik zawiera sprawdzone strategie i techniki, które pomogą Ci znacznie poprawić jakość odpowiedzi generowanych przez ChatGPT. Dzięki temu możesz prowadzić bardziej płynne i sensowne rozmowy z modelem AI.</dd>
                 
                 <dt>💰 Wartość</dt>
-                <dd><span class="fw-bold">300 PLN</span></dd>
+                <dd>300zł</dd>
               </dl>
             </div>
           </div>
@@ -714,7 +779,7 @@
                 <dt></dt>
                 <dd>Odkryj, jak wykorzystać MidJourney do tworzenia obrazów w konkretnych stylach. Ten przewodnik zawiera praktyczne kroki, które umożliwią Ci szybkie i łatwe dostosowywanie obrazów zgodnie z wybranym stylem.</dd>
                 <dt>💰 Wartość</dt>
-                <dd><span class="fw-bold">300 PLN</span></dd>
+                <dd>300zł</dd>
               </dl>
             </div>
           </div>
@@ -727,7 +792,7 @@
                 <dt></dt>
                 <dd>Otrzymasz dodatkowe lekcje, które nie tylko pokażą Ci, jak generować pomysły, ale także jak tworzyć przykładowe treści w wielu językach. Dzięki temu będziesz w stanie dotrzeć do szerszej międzynarodowej publiczności.</dd>
                 <dt>💰 Wartość</dt>
-                <dd><span class="fw-bold">400 PLN</span></dd>
+                <dd>400zł</dd>
               </dl>
             </div>
           </div>
@@ -740,7 +805,7 @@
                 <dt></dt>
                 <dd>Dowiedz się, jak w pełni wykorzystać możliwości GPT-4, nie płacąc za miesięczną subskrypcję PRO. Znajdziesz w niej wskazówki i triki, które pozwolą Ci zaoszczędzić pieniądze i cieszyć się pełnym potencjałem GPT-4.</dd>
                 <dt>💰 Wartość</dt>
-                <dd><span class="fw-bold">~960 PLN</span></dd>
+                <dd>~960zł</dd>
               </dl>
             </div>
           </div>
@@ -792,22 +857,22 @@
               Gwarancja satysfakcji
             </h2>
             <p class="mt-lg-4 mb-4 fs-2">
-              Chcę, abyś czuł się pewnie, inwestując w ten kurs. 
+              <b>Chcę, abyś czuł się pewnie</b>, inwestując w ten kurs. 
             </p>
             <p class="mt-lg-4 mb-4 fs-2">  
-              Dlatego oferuję Ci pełną gwarancję zwrotu pieniędzy w ciągu 30 dni od zakupu kursu, jeśli nie będziesz w pełni zadowolony. 
+              Dlatego oferuję Ci <b>gwarancję pwłnego zwrotu pieniędzy w ciągu 30 dni</b> od zakupu kursu, jeśli nie będziesz w pełni zadowolony. 
             </p>
             <p class="mt-lg-4 mb-4 fs-2">  
-              Tak bardzo wierzę w wartość, którą przekazuję w tym kursie, że jestem gotów zwrócić Ci każdą złotówkę, jeśli poczujesz, że nie spełniłem Twoich oczekiwań. Twoje zadowolenie i postępy są dla mnie priorytetem.
+              Tak bardzo wierzę w wartość, którą przekazuję w tym kursie, że jestem gotów <b>zwrócić Ci każdą złotówkę</b>, jeśli poczujesz, że nie spełniłem Twoich oczekiwań. 
             </p>
-            <p class="mt-lg-4 mb-4 fs-2"> 
-              Chcę, byś czuł się komfortowo i pewnie w swojej decyzji. 
+            <p class="mt-lg-4 mb-4 fs-2">   
+              <b>Twoje zadowolenie i postępy są dla mnie priorytetem</b>, dlatego chcę, byś czuł się komfortowo i pewnie w swojej decyzji. 
             </p>
             <p class="mt-lg-4 mb-4 fs-2">
-              Daj mi szansę przekonać Cię do wartości tego kursu, a jeśli z jakiegoś powodu poczujesz, że to nie dla Ciebie - zwrócę Ci pieniądze.
+              Daj mi szansę przekonać Cię do wartości tego kursu, a jeśli z jakiegoś powodu poczujesz, że to nie dla Ciebie - <b>zwrócę Ci pieniądze</b>.
             </p>
             <p class="mt-lg-4 mb-4 fs-2">  
-              Bez pytań.
+              <b>Bez pytań</b>!
             </p>
           </div>
       </section>
@@ -954,6 +1019,30 @@
       setInterval(setPromoTextToAllElements, 1000);
 
       });
+
+    </script>
+    <script>
+      let modal = document.getElementById("videoModal");
+      let img = document.getElementById("value-image");
+      let video = document.getElementById("video");
+      let span = document.getElementsByClassName("close")[0];
+
+      img.onclick = function() {
+          modal.style.display = "block";
+          video.play();
+      }
+
+      span.onclick = function() {
+          modal.style.display = "none";
+          video.pause();
+      }
+
+      window.onclick = function(event) {
+          if (event.target === modal) {
+              modal.style.display = "none";
+              video.pause();
+          }
+      }
 
     </script>
       
