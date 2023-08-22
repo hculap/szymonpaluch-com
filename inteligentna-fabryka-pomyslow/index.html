@@ -130,46 +130,58 @@
       .author-stars {
         color: gold;
       }
-      .modal {
-        display: none; // for centering purposes
-        align-items: center; // centering the modal vertically
-        justify-content: center; // centering the modal horizontally
-        top: 0; 
-        left: 0;
-        width: 100%; 
-        height: 100%; 
-        overflow: auto;
-        margin: 0px
-        background-color: rgba(0,0,0,0.7);
-
+      .video-modal {
+          display: none; 
+          position: fixed; 
+          top: 0; 
+          left: 0; 
+          width: 100%; 
+          height: 100%; 
+          overflow: auto;
+          background-color: rgba(0,0,0,0.7);
+          align-items: center; 
+          justify-content: center; 
+          z-index: 9999999;
       }
 
       .modal-content {
-          position: relative;
-          margin: 50% auto; 
-          padding: 20px;
-          width: 80%;
+          position: relative; 
+          width: 100%;
+          max-width: 75%; 
+          padding: 0; 
       }
 
       video {
+          display: block;
           width: 100%; 
-          height: auto;
+          height: auto; 
+          margin: 0 auto; 
       }
 
       .close {
-          position: absolute;
-          right: 10px;
-          top: 0;
-          color: #aaa;
-          font-size: 28px;
-          font-weight: bold;
-          cursor: pointer;
+          position: absolute; 
+          right: 8px; 
+          top: 8px; 
+          color: #aaa; 
+          font-size: 28px; 
+          font-weight: bold; 
+          cursor: pointer; 
+          background-color: rgba(0, 0, 0, 0.7);
+          border-radius: 50%;
+          padding: 8px;
+          z-index: 10;
       }
 
       .close:hover, .close:focus {
-          color: #000;
-          text-decoration: none;
-          cursor: pointer;
+          color: #fff; 
+          text-decoration: none; 
+          cursor: pointer; 
+      }
+
+      @media screen and (max-width: 768px) {
+          .modal-content {
+              max-width: 100%; 
+          }
       }
 
 
@@ -217,7 +229,8 @@
         <!-- Hero Section -->
         <section id="hero" class="flex row justify-content-lg-between align-items-center pb-10 border-bottom border-dark-3">
           <div class="col-lg-5 col-12">
-            <img src="./landing_marketing_files/bulb.png" srcset="./landing_marketing_files/bulb.png 2x" alt="" class="w-75 mg img-fluid mx-auto d-block">
+            <img src="./landing_marketing_files/bulb.png" srcset="./landing_marketing_files/bulb.png 2x" alt="" class="w-75 mg img-fluid mx-auto d-none d-lg-block">
+            <img src="./landing_marketing_files/bulb.png" srcset="./landing_marketing_files/bulb.png 2x" alt="" class="w-50 mg img-fluid mx-auto d-block d-lg-none">
             <div id="scroll-arrow" class="scroll-arrow">
               <p class="read-more"><b>CZYTAJ DALEJ</b></p>
               <span class="arrow"></span>
@@ -283,8 +296,13 @@
             </p>
           </div>
           <div class="col-12 col-lg-6">  
-            <img id="value-image" src="./landing_marketing_files/yt_cover.png" srcset="./landing_marketing_files/yt_cover.png 2x" alt="" class="img img-fluid mx-auto d-block border border-dark-3 shadow">
-            <div id="videoModal" class="modal">
+            <img src="./landing_marketing_files/yt_cover.png" srcset="./landing_marketing_files/yt_cover.png 2x" alt="" class="btn-video img img-fluid mx-auto d-block border border-dark-3 shadow">
+            
+            <div class="text-center mt-3">
+              <a href="#" class="btn-video btn btn-primary btn rounded-0 text-uppercase shadow">Zobacz wideo</a>
+            </div>
+            
+            <div id="videoModal" class="video-modal">
               <div class="modal-content">
                   <span class="close">&times;</span>
                   <video id="video" controls>
@@ -292,7 +310,7 @@
                       Twoja przeglądarka nie obsługuje elemntu wideo.
                   </video>
               </div>
-          </div>
+            </div>
           </div>
         </section>
         <!-- Course Plan -->
@@ -1023,25 +1041,30 @@
     </script>
     <script>
       let modal = document.getElementById("videoModal");
-      let img = document.getElementById("value-image");
+      let triggers = document.querySelectorAll(".btn-video");
       let video = document.getElementById("video");
       let span = document.getElementsByClassName("close")[0];
 
-      img.onclick = function() {
-          modal.style.display = "block";
+      for(let trigger of triggers) {
+        trigger.onclick = function(e) {
+          e.preventDefault();
+          modal.style.display = "flex";
           video.play();
+        }
       }
 
-      span.onclick = function() {
+
+      span.addEventListener('click', function() {
           modal.style.display = "none";
           video.pause();
-      }
+      });
 
       window.onclick = function(event) {
-          if (event.target === modal) {
-              modal.style.display = "none";
-              video.pause();
-          }
+        if (event.target === modal) {
+          console.log('hello');
+          modal.style.display = "none";
+          video.pause();
+        }
       }
 
     </script>
