@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .bubble {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            height: 40px;
+            width: 40px;
+            padding: 10px;
+            text-align: center;
+            line-height: 40px;
+            background-color: #7a94ce;
+            color: white;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .chat-window {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .chat-header,
+        .chat-footer {
+            padding: 10px;
+            background-color: #7a94ce;
+            color: white;
+        }
+
+        .chat-body {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .message {
+            margin: 5px;
+            padding: 10px;
+            background-color: #eee;
+            border-radius: 5px;
+        }
+
+        .typing-indicator {
+            margin: 5px;
+            padding: 10px;
+            background-color: #eee;
+            border-radius: 5px;
+            opacity: 1;
+            animation: typingFlash 1s infinite;
+        }
+
+            @keyframes typingFlash {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .message-right {
+            margin: 5px;
+            padding: 10px;
+            background-color: #ccc;
+            border-radius: 5px;
+            text-align: right;
+            order: 1;
+        }
+
+        .message-left {
+            margin: 5px;
+            padding: 10px;
+            background-color: #eee;
+            border-radius: 5px;
+            text-align: left;
+            order: 2;
+        }
+
+        .message-time {
+            font-size: 12px;
+            color: #555;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="chat-bubble" class="bubble">
+        <span>?</span>
+    </div>
+
+    <div id="chat-window" class="chat-window">
+        <div class="chat-header">
+            <span>Jak mogę Ci pomóc?</span>
+            <button id="close-btn">X</button>
+        </div>
+        <div class="chat-body">
+            <div class="message">Cześć! Czy mogę Ci jakoś pomóc uzyskac informacje dotyczące kursu "Inteligentna Fabryka Pomysłów"?</div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="input-box" placeholder="Zadaj pytanie">
+            <button id="send-btn">Wyślij</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const chatBubble = document.getElementById('chat-bubble');
+            const chatWindow = document.getElementById('chat-window');
+            const closeButton = document.getElementById('close-btn');
+            const sendButton = document.getElementById('send-btn');
+            const inputBox = document.getElementById('input-box');
+
+            chatBubble.addEventListener('click', function() {
+                chatWindow.style.display = 'flex';
+                chatWindow.style.flexDirection = 'column';
+            });
+
+            closeButton.addEventListener('click', function() {
+                chatWindow.style.display = 'none';
+            });
+
+            const appendMessageToChat = (messageText, alignmentClass) => {
+                const chatBody = document.querySelector('.chat-body');
+                const newMessageDiv = document.createElement('div');
+                const messageTime = new Date().toLocaleTimeString('pl-PL', { hour12: false, hour: '2-digit', minute: '2-digit' });
+        
+            
+                newMessageDiv.className = `message ${alignmentClass}`;
+                newMessageDiv.innerHTML = `
+                    <span>${messageText}</span>
+                    <div class="message-time">${messageTime}</div>
+                `;
+                
+                chatBody.appendChild(newMessageDiv);
+            };
+
+
+            const showTypingIndicator = () => {
+                const chatBody = document.querySelector('.chat-body');
+                const typingDiv = document.createElement('div');
+                typingDiv.className = 'message typing-indicator';
+                typingDiv.innerText = '...';
+                typingDiv.id = 'typing-indicator';
+                chatBody.appendChild(typingDiv);
+            };
+
+                const removeTypingIndicator = () => {
+                const typingIndicator = document.getElementById('typing-indicator');
+                if (typingIndicator) {
+                    typingIndicator.remove();
+                }
+            };
+
+            sendButton.addEventListener('click', function() {
+                const message = inputBox.value;
+                appendMessageToChat(message, 'message-right');  // Append user's message to chat
+                inputBox.value = '';
+
+                // Show typing indicator
+                showTypingIndicator();
+
+                // Send the message to the API
+                fetch('https://hook.eu1.make.com/was6inuosx3lehyfavsp9p4p89afs2bj', {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ message: message })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Message sent:', data);
+
+                    // Remove typing indicator
+                    removeTypingIndicator();
+
+                    if (data.message) {
+                    appendMessageToChat(data.message, 'message-left');  // Append response message to chat
+                    }
+                })
+                .catch(error => {
+                    console.log('Error sending message:', error);
+
+                    // Remove typing indicator
+                    removeTypingIndicator();
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>
