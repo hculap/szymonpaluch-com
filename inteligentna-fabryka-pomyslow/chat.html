@@ -1212,39 +1212,51 @@
           }
       };
 
-      sendButton.addEventListener('click', function() {
-          const message = inputBox.value;
-          appendMessageToChat(message, 'message-right');  // Append user's message to chat
-          inputBox.value = '';
+      // Function to send message
+      const sendMessage = () => {
+        const message = inputBox.value.trim();
+          if (message) {
+            appendMessageToChat(message, 'message-right');  // Append user's message to chat
+            inputBox.value = '';
 
-          // Show typing indicator
-          showTypingIndicator();
+            // Show typing indicator
+            showTypingIndicator();
 
-          // Send the message to the API
-          fetch('https://hook.eu1.make.com/was6inuosx3lehyfavsp9p4p89afs2bj', {
-              method: 'POST',
-              headers: {
-              'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({ message: message })
-          })
-          .then(response => response.json())
-          .then(data => {
-              console.log('Message sent:', data);
+            // Send the message to the API
+            fetch('https://hook.eu1.make.com/was6inuosx3lehyfavsp9p4p89afs2bj', {
+                method: 'POST',
+                headers: {
+                'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: message })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Remove typing indicator
+                removeTypingIndicator();
 
-              // Remove typing indicator
-              removeTypingIndicator();
+                if (data.message) {
+                  appendMessageToChat(data.message, 'message-left');  // Append response message to chat
+                }
+            })
+            .catch(error => {
+                console.log('Error sending message:', error);
+                // Remove typing indicator
+                removeTypingIndicator();
+                appendMessageToChat("Upss! Coś poszło nie tak. Spróbuj wysłać widomość ponownie.", 'message-left');  // Append response message to chat
+            });
+          }
+      }
 
-              if (data.message) {
-              appendMessageToChat(data.message, 'message-left');  // Append response message to chat
-              }
-          })
-          .catch(error => {
-              console.log('Error sending message:', error);
+      // Event Listener for Send Button
+      sendBtn.addEventListener('click', sendMessage);
 
-              // Remove typing indicator
-              removeTypingIndicator();
-          });
+      // Event Listener for Enter Key in the Input Box
+      inputBox.addEventListener('keydown', function(event) {
+        if (event.keyCode === 13 && !event.shiftKey) { // 13 is the keyCode for Enter
+          event.preventDefault(); // Prevent a new line being added in the input box
+          sendMessage();
+        }
       });
   });
 
