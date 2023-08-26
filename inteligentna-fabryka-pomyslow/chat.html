@@ -1194,7 +1194,7 @@
 
       firstMessage = 'Cześć! Czy mogę Ci pomóc uzyskać informacje dotyczące kursu "Inteligentna Fabryka Pomysłów"?';
       appendMessageToChat(firstMessage,  'message-left');
-      sessionStorage.setItem("previousAnswer", firstMessage);
+      
 
       const showTypingIndicator = () => {
           const chatBody = document.querySelector('.chat-body');
@@ -1244,7 +1244,10 @@
               removeTypingIndicator();
 
               if (data.message) {
-                appendMessageToChat(data.message, 'message-left');  // Append response message to chat
+                // Append response message to chat
+                appendMessageToChat(data.message, 'message-left'); 
+                // Save the assistant's answer to sessionStorage
+                sessionStorage.setItem("previousAnswer", data.message);
               }
           })
           .catch(error => {
@@ -1253,8 +1256,6 @@
               removeTypingIndicator();
               // Append response message to chats
               appendMessageToChat("Upss! Coś poszło nie tak. Spróbuj wysłać widomość ponownie.", 'message-left'); 
-              // Save the assistant's answer to sessionStorage
-              sessionStorage.setItem("previousAnswer", data.message);
           });
         }
       }
