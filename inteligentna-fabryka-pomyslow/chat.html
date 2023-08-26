@@ -1164,6 +1164,8 @@
       const sendButton = document.getElementById('send-btn');
       const inputBox = document.getElementById('input-box');
 
+      sessionStorage.clear();
+
       chatBubble.addEventListener('click', function() {
           chatWindow.style.display = 'flex';
           chatBubble.style.display = 'none';
@@ -1192,6 +1194,7 @@
 
       firstMessage = 'Cześć! Czy mogę Ci pomóc uzyskać informacje dotyczące kursu "Inteligentna Fabryka Pomysłów"?';
       appendMessageToChat(firstMessage,  'message-left');
+      sessionStorage.setItem("previousAnswer", firstMessage);
 
       const showTypingIndicator = () => {
           const chatBody = document.querySelector('.chat-body');
@@ -1215,37 +1218,45 @@
       // Function to send message
       const sendMessage = () => {
         const message = inputBox.value.trim();
-          if (message) {
-            appendMessageToChat(message, 'message-right');  // Append user's message to chat
-            inputBox.value = '';
+        const previousMessage = sessionStorage.getItem("previousMessage") || "";
+        const previousAnswer = sessionStorage.getItem("previousAnswer") || "";
+        if (message) {
+          appendMessageToChat(message, 'message-right');  // Append user's message to chat
+          inputBox.value = '';
 
-            // Show typing indicator
-            showTypingIndicator();
+          // Save the current message to sessionStorage
+          sessionStorage.setItem("previousMessage", message);
 
-            // Send the message to the API
-            fetch('https://hook.eu1.make.com/was6inuosx3lehyfavsp9p4p89afs2bj', {
-                method: 'POST',
-                headers: {
-                'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ message: message })
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Remove typing indicator
-                removeTypingIndicator();
+          // Show typing indicator
+          showTypingIndicator();
 
-                if (data.message) {
-                  appendMessageToChat(data.message, 'message-left');  // Append response message to chat
-                }
-            })
-            .catch(error => {
-                console.log('Error sending message:', error);
-                // Remove typing indicator
-                removeTypingIndicator();
-                appendMessageToChat("Upss! Coś poszło nie tak. Spróbuj wysłać widomość ponownie.", 'message-left');  // Append response message to chat
-            });
-          }
+          // Send the message to the API
+          fetch('https://hook.eu1.make.com/was6inuosx3lehyfavsp9p4p89afs2bj', {
+              method: 'POST',
+              headers: {
+              'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ message: message, previousMessage: previousMessage, previousAnswer: previousAnswer })
+          })
+          .then(response => response.json())
+          .then(data => {
+              // Remove typing indicator
+              removeTypingIndicator();
+
+              if (data.message) {
+                appendMessageToChat(data.message, 'message-left');  // Append response message to chat
+              }
+          })
+          .catch(error => {
+              console.log('Error sending message:', error);
+              // Remove typing indicator
+              removeTypingIndicator();
+              // Append response message to chats
+              appendMessageToChat("Upss! Coś poszło nie tak. Spróbuj wysłać widomość ponownie.", 'message-left'); 
+              // Save the assistant's answer to sessionStorage
+              sessionStorage.setItem("previousAnswer", data.message);
+          });
+        }
       }
 
       // Event Listener for Send Button
