@@ -193,11 +193,17 @@
               width: 400px;
               height: 500px;
           }
+
+          .card-header {
+            background-color: #7a94ce ;
+            color: #fff;
+          }
   
           .chat-body {
             max-height: 400px;
             overflow-y: auto;
           }
+        
 
           .message-time {
             font-size: 12px;
@@ -210,12 +216,15 @@
 
           .message-left {
             text-align: left;
+            background-color: rgba(39, 40, 42, 0.03);
           }
 
           .typing-indicator {
             background-color: #eee;
             animation: typingFlash 1s infinite;
           }
+
+          
 
           @keyframes typingFlash {
             0% { opacity: 1; }
@@ -227,6 +236,7 @@
             .chat-window {
               width: 100vw;
               height: 50vh;
+              position: fixed;
             }
           }
             
@@ -1007,7 +1017,7 @@
       <div class="col-12 col-lg-3 navigation text-center shadow-lg">
         <p class="mt-2 mb-1 fs-4">Pełna cena: <span class="c-cta"><s>899zł</s></span></p>
         <h2 class="text-center fw-bold fs-2 pb-2">Przedsprzedaż: <span class="c-primary">499zł</span></h2>
-        <a href="https://app.easycart.pl/checkout/45947452/kurs-inteligentna-fabryka-pomyslow" class="btn btn-primary btn rounded-0 text-uppercase mb-2">Przejdź do koszyka</a> 
+        <a href="https://app.easycart.pl/checkout/45947452/kurs-inteligentna-fabryka-pomyslow" class="btn btn-primary btn rounded-0 text-uppercase mb-3">Przejdź do koszyka</a> 
       </div>
     </div>
     <footer class="pb-md-3 py-3 text-center ">
@@ -1025,25 +1035,25 @@
 
     <!-- Chat -->
     <div id="chat-bubble" class="chat-bubble shadow-lg position-fixed bottom-0 end-0 m-3">
-      <button class="btn btn-primary">?</button>
+      <button class="btn btn-primary rounded-0 text-uppercase ">?</button>
     </div>
 
-    <div id="chat-window" class="chat-window shadow-lg position-fixed bottom-0 end-0 m-0 m-lg-3 " style="display:none;">
-      <div class="card">
-        <div class="card-header">
+    <div id="chat-window" class="chat-window shadow-lg position-fixed bottom-0 end-0 m-0 m-lg-3" style="display:none;">
+      <div class="card ">
+        <div class="card-header fw-bold rounded-0">
           Pomoc
           <button id="close-btn" class="btn-close float-end"></button>
         </div>
-        <div class="card-body chat-body">
+        <div class="card-body chat-body c-light-1 ">
           <!-- Messages will be added here -->
         </div>
-        <div class="card-footer py-6 py-lg-3">
+        <div class="card-footer">
           <div class="row">
             <div class="col-8">
-              <input id="input-box" class="form-control" type="text" placeholder="Zadaj pytanie...">
+              <input id="input-box" class="form-control rounded-0 bg-light-1" type="text" placeholder="Zadaj pytanie...">
             </div>
             <div class="col-4">
-              <button id="send-btn" class="btn btn-primary w-100">Wyślij</button>
+              <button id="send-btn" class="btn btn-primary rounded-0 text-uppercase  w-100">Wyślij</button>
             </div>
           </div>
         </div>
