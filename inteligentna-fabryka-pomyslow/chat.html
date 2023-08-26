@@ -1048,14 +1048,14 @@
           <!-- Messages will be added here -->
         </div>
         <div class="card-footer">
-          <div class="row">
-            <div class="col-8">
-              <input id="input-box" class="form-control rounded-0 bg-light-1" type="text" placeholder="Zadaj pytanie...">
-            </div>
-            <div class="col-4">
-              <button id="send-btn" class="btn btn-primary rounded-0 text-uppercase  w-100">Wyślij</button>
+
+          <div class="input-group">
+            <input id="input-box" class="form-control rounded-0 bg-light-1" type="text" placeholder="Zadaj pytanie..." >
+            <div class="input-group-append">
+              <button id="send-btn" class="btn btn-primary rounded-0 text-uppercase "  type="button">Wyślij</button>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -1249,7 +1249,7 @@
       }
 
       // Event Listener for Send Button
-      sendBtn.addEventListener('click', sendMessage);
+      sendButton.addEventListener('click', sendMessage);
 
       // Event Listener for Enter Key in the Input Box
       inputBox.addEventListener('keydown', function(event) {
