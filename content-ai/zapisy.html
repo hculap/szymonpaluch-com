@@ -185,13 +185,13 @@
             </div>
             <div class="row mb-3">
               <div class="col-0 col-lg-2"></div>
-              <div id="mlb2-7087899" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-7087899 col-12 col-lg-8">
-                <form action="https://assets.mailerlite.com/jsonp/500457/forms/96730615579149333/subscribe" data-code="" method="post" target="_blank" class="ml-block-form">
+              <div id="mlb2-7328165" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-7328165 col-12 col-lg-8">
+                <form action="https://assets.mailerlite.com/jsonp/500457/forms/97758355644221137/subscribe" data-code="" method="post" target="_blank" class="ml-block-form">
                   <div class=" rounded-0 border-0 form-primary">
                     <input type="email" placeholder="Adres email" class="form-control rounded-0 mb-4 form-primary" required="required"  data-inputmask="" name="fields[email]"  autocomplete="email">
                   </div>
                   <div class=" rounded-0 border-0 form-primary">
-                    <input type="phone" placeholder="Numer telefonu (opcjonalnie)" class="form-control rounded-0 mb-2 form-primary"  data-inputmask="" name="fields[email]"  autocomplete="email">
+                    <input type="tel" placeholder="Numer telefonu (opcjonalnie)" class="form-control rounded-0 mb-2 form-primary"  data-inputmask="" name="fields[phone]"  autocomplete="tel">
                   </div>
                   <p class="mb-5 fs-6 fw-bold">
                     * Zostaw numer telefonu jeśli chcesz otrzymać przypomnienie SMS o webinarze
@@ -265,6 +265,18 @@
               localStorage.setItem(param, value);
           }
       }
+    </script>
+
+<script>
+  function ml_webform_success_7328165() {
+    var $ = ml_jQuery || jQuery;
+    window.location = 'https://szymonpaluch.com/content-ai/podziekowanie'
+  }
+</script>
+
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v1f25ee4b05f240a833e02c19975434a4" type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/500457/forms/97758355644221137/track-view")
     </script>
   </body>
 </html>
