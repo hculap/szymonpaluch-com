@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <title>KURS "Inteligentna Fabryka Pomysłów" | PRZEDSPRZEDAŻ | Szymon Paluch – Biznes Na Granicy Jutra</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link href="./landing_marketing_files/styles.min.css" rel="stylesheet" id="sf-custom-css">
+    <style>
+      ::selection {
+        background: #7a94ce;
+      }
+      body {
+        background: rgb(221,219,213);
+        background: -moz-linear-gradient(to top right, rgba(221,219,213,1) 0%, rgba(255,255,255,1) 100%);
+        background: -webkit-linear-gradient(to top right, rgba(221,219,213,1) 0%, rgba(255,255,255,1) 100%);
+        background: linear-gradient(to top right, rgba(221,219,213,1) 0%, rgba(255,255,255,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dddbd5",endColorstr="#ffffff",GradientType=1);
+        min-height: 100vh;
+        text-align: left;
+      }
+      .btn-primary {
+        background-color: #7a94ce; 
+        border-color: #7a94ce;
+        color: #ffffff;
+      }
+      .btn-primary:hover {
+        background-color: #7c7e9c;
+        border-color: #7c7e9c;
+        color: #ffffff;
+
+      }
+      .form-primary {
+        background-color: #ffffff;
+        border-color: #7a94ce;
+      }
+      .c-primary {
+        color: #7a94ce;
+      }
+      .c-cta {
+        color: #dd6567;
+      }
+
+      .scroll-arrow {
+          position: fixed;
+          cursor: pointer;
+          left: 50%;
+          bottom: 160px;
+          animation: pulse 1s infinite;
+          display: none; /* by default the arrow is hidden */
+          text-align: center; /* center the text and the arrows */
+      }
+
+      /* Show the arrow on screens smaller than 992px */
+      @media screen and (max-width: 991px) {
+          .scroll-arrow {
+              display: block;
+          }
+      }
+
+      .scroll-arrow .arrow {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          margin: 0px;
+          transform: translate(0, -10px) rotateZ(45deg);
+          border-bottom: 4px solid #dd6567;
+          border-right: 4px solid #dd6567;
+      }
+
+      .read-more {
+          font-size: 1em;
+          margin-bottom: 0.25em;
+          color: #dd6567;
+          text-shadow: 0px 1px 1px rgba(66, 68, 90, 1);
+      }
+
+      @keyframes pulse {
+          0% { transform: translate(-50%, 0); }
+          50% { transform: translate(-50%, -10px); }
+          100% { transform: translate(-50%, 0); }
+      }
+
+      .author-info {
+          display: flex;
+          align-items: center;
+          margin-top: 1em;
+      }
+
+      .author-photo {
+          width: 50px;  /* adjust as needed */
+          height: 50px;
+          border-radius: 50%;
+          margin-right: 1em;
+          background-color: #7c7e9c;
+      }
+
+      .author-name, .author-position {
+          margin: 0;
+      }
+      .iframe-container {
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+          margin: 0 auto; /* Center the container */
+      }
+
+      .iframe-container iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border: 0;
+      }
+
+      .card {
+        height: 100%;
+        border-radius: 0px;
+      }
+
+      .navigation {
+        background-color: #ffffff;
+        border: 1px solid rgba(39, 40, 42, 0.125);
+      }
+      .author-stars {
+        color: gold;
+      }
+      .video-modal {
+          display: none; 
+          position: fixed; 
+          top: 0; 
+          left: 0; 
+          width: 100%; 
+          height: 100%; 
+          overflow: auto;
+          background-color: rgba(0,0,0,0.7);
+          align-items: center; 
+          justify-content: center; 
+          z-index: 9999999;
+      }
+
+      .modal-content {
+          position: relative; 
+          width: 100%;
+          max-width: 75%; 
+          padding: 0; 
+      }
+
+      video {
+          display: block;
+          width: 100%; 
+          height: auto; 
+          margin: 0 auto; 
+      }
+
+      .close {
+          position: absolute; 
+          right: 8px; 
+          top: 8px; 
+          color: #aaa; 
+          font-size: 28px; 
+          font-weight: bold; 
+          cursor: pointer; 
+          padding: 8px;
+          z-index: 10;
+      }
+
+      .close:hover, .close:focus {
+          color: #fff; 
+          text-decoration: none; 
+          cursor: pointer; 
+      }
+
+      @media screen and (max-width: 768px) {
+          .modal-content {
+              max-width: 100%; 
+          }
+      }
+
+
+    </style>
+    <meta name="twitter:card" content="summary_large_image"></meta>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PGG767H');</script>
+    <!-- End Google Tag Manager -->
+
+      <!-- Meta Pixel Code -->
+      <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '226957853624203');
+        fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=226957853624203&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- End Meta Pixel Code -->       
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+	    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGG767H" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+ 
+      <div class="container">
+        <!-- <div class="row flex align-items-center justify-content-center mt-6">
+          <div class="col-8 col-lg-4 card text-center shadow">
+            <p class="promo-text c-cta fs-3 my-2">Koniec promocji o 23:59</p>
+          </div>
+        </div> -->
+        <!-- Hero Section -->
+        <section id="hero" class="flex row justify-content-lg-between align-items-center py-10 border-bottom border-dark-3">
+          <div class="col-12">
+            <h1 class="display-8 text-uppercase text-center fs-1 my-10">
+              Nie wiesz, jak wykorzystać 100% możliwości Chata GPT?
+            </h1>
+          </div>
+          <div class="col-12 col-lg-6">
+            <h2 class="display-8 text-uppercase fs-2 py-6">
+              Teraz to nie problem, pokażę Ci jak to zrobić z&nbsp;moim e-bookiem.
+            </h2>
+            <p class="mt-4 mb-4 fs-2">
+              Prowadzenie biznesu internetowego totalnie się zmieniło.
+            </p>
+            <p class="mt-4 mb-4 fs-2">  
+              <b>Dziś samo bycie w Internecie nie wystarcza.</b>
+            </p>
+            <p class="mt-4 mb-4 fs-2">   
+              Wymagają od Ciebie:
+            </p>
+            <p class="mt-4 mb-4 fs-3">
+              🔶 <b>Ciągłej kreatywności</b> i eksperckich porad na każdym rogu.<br/>
+              🔶 <b>Niekończących się pomysłów</b> na różnego rodzaju treści.<br/>
+              🔶 <b>Stałego dopływu contentu</b> niezależnie od nastroju, pory roku czy sytuacji życiowej.<br/>
+            </p>
+            <p class="mt-4 mb-4 fs-2">   
+              Jeśli pójdziesz tą drogą, to wypalenie przyjdzie już po paru latach, a może i miesiącach.
+            </p>
+          </div>
+          <div class="col-12 col-lg-6">  
+            <img src="./landing_marketing_files/yt_cover.png" srcset="./landing_marketing_files/yt_cover.png 2x" alt="" class="btn-video img img-fluid mx-auto d-block border border-dark-3 shadow">            
+            <div class="text-center mt-3">
+              <a href="#" class="btn-video btn btn-primary btn rounded-0 text-uppercase shadow">Zobacz wideo</a>
+            </div>
+            <div id="videoModal" class="video-modal">
+              <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <video id="video" controls>
+                      <source src="https://d2mltfd1m3829p.cloudfront.net/marketing-ai/bonus.mp4" type="video/mp4">
+                      Twoja przeglądarka nie obsługuje elemntu wideo.
+                  </video>
+              </div>
+            </div>
+            <div id="scroll-arrow" class="scroll-arrow">
+              <p class="read-more"><b>CZYTAJ DALEJ</b></p>
+              <span class="arrow"></span>
+            </div> 
+          </div>
+        </section>
+        <!-- Free Value -->
+        <section id="value" class="flex row justify-content-lg-between align-items-center py-10 border-bottom border-dark-3 text-center">
+          <div class="col-12">
+            <h3 class="display-8 text-uppercase fs-2 pb-6">
+              Masz do wyboru 2 opcje
+            </h3>  
+            <p class="mt-4 mb-4 fs-2">
+              ❌ albo zatrudnić osoby, zaryzykować sporo kapitału i oddelegować cały proces innym.
+            </p>  
+            <p class="mt-4 mb-4 fs-2">  
+              lub...
+            </p>  
+            <p class="mt-4 mb-4 fs-2">  
+              ✅ Nauczyć się wykorzystywać AI niczym mistrz u siebie w biznesie.
+            </p>  
+            <h3 class="display-8 text-uppercase fs-2 py-6">
+              Osobiście preferuję tę drugą opcję!
+            </h3> 
+          </div>
+        </section>
+        <!-- Is it For Me? -->
+        <section id="adventages" class="flex row justify-content-lg-between align-items-center align-content-stretch py-10 py-lg-20 border-bottom border-dark-3">
+          <div class="col-12 mb-6 mb-lg-12">
+            <div class="flex row justify-content-lg-between align-items-center flex-lg-row-reverse">
+              <div class="col-12 col-lg-6">
+                <h2 class="display-8 text-uppercase fs-1 pb-6">
+                  Dlaczego?
+                </h2>
+                  
+
+                <ul class="mt-lg-3 mb-3 fs-2">                  
+                    <li>🔥 Jest skuteczniejsza i szybsza od ludzi.</li>
+                    <li>🔥 Nie bierze L4, nie chce podwyżki i pracuje 24/7/365 dni w roku.</li>
+                    <li>🔥 Pozwala na automatyzowanie procesów od pierwszego dnia.</li>
+                    <li>🔥 Wymaga minimalnego nakładu finansowego i czasowego.</li>
+                </ul>
+
+                <p class="mt-lg-4 mb-4 fs-2">
+                  Pewnie teraz się zastanawiasz…
+                </p>
+              </div>
+              <div class="col-12 col-lg-6">
+                <img src="./landing_marketing_files/scene1.png" srcset="./landing_marketing_files/scene1.png 2x" alt="" class="img img-fluid mx-auto d-block shadow">
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mb-6">
+            <div class="flex row align-items-center">
+              <div class="col-12 col-lg-6">
+                <h2 class="display-8 text-uppercase fs-1 mt-6 pb-6">
+                  ale jak to ogarnąć?
+                </h2>
+                <p class="mt-lg-4 mb-4 fs-2">
+                  Świetnie — nie musisz robić tego metodą prób i błędów.
+                </p>
+                <p class="mt-lg-4 mb-4 fs-2">
+                  Skorzystaj z mojego doświadczenia.
+                </p>
+                <p class="mt-lg-4 mb-4 fs-2">
+                  Stworzyłem e-booka: Jak skutecznie rozmawiać z Chat GPT — od nowicjusza do profesjonalisty.
+                </p>
+                <p class="mt-lg-4 mb-4 fs-2">
+                  Kosztuje on tylko… X PLN!
+                </p>
+                <p class="mt-lg-4 mb-4 fs-2">
+                  Osobiście wyceniam go na Y PLN, jednak chcę,
+                </p>
+                <p class="mt-lg-4 mb-4 fs-2">
+                  by jak najwięcej osób mogło skorzystać z tej cyfrowej rewolucji 
+                </p>
+                
+              </div>
+              <div class="col-12 col-lg-6">
+                <img src="./landing_marketing_files/scene2.png" srcset="./landing_marketing_files/scene2.png 2x" alt="" class="img img-fluid mx-auto d-block shadow">
+              </div>
+            </div>
+          </div>
+
+        </section>
+        <!-- Course Plan -->
+        <section id="plan" class="flex row justify-content-lg-between align-content-stretch py-10 py-lg-20 border-bottom border-dark-3">
+          <div class="col-12 flex row align-items-center mb-6 mb-lg-18">
+            <div class="col-12 col-lg-6 pb-10">
+              <img src="./landing_marketing_files/hero.png" srcset="./landing_marketing_files/hero.png 2x" alt="" class="img img-fluid mx-auto d-block w-50 border border-dark-3 shadow">
+            </div>
+            <div class="col-12 col-lg-6 pb-2">
+              <h2 class="display-8 text-uppercase fs-1">
+                  Poznaj "Inteligentną Fabrykę Pomysłów"
+              </h2> 
+              <p class="mt-4 mb-4 fs-2">
+                Przygotuj się na <b>podróż inną niż wszystkie</b>!
+              </p> 
+              <p class="mt-4 mb-4 fs-2">
+                Uczestniczac w <b>"Inteligentną Fabrykę Pomysłów"</b>, znajdziesz skrupulatnie opracowane moduły zaprojektowane tak, aby dać Ci pełne <b>zrozumienie narzędzi AI </b>i poprawić każdy aspekt Twojej <b>procesu w tworzenie treści</b>.
+              </p>
+              <p class="mt-4 mb-4 fs-2">
+                Kurs jest <b>nastawiony na praktykę</b> i jestem przekonany, że dasz radę przerobić go w <b>3/4 wieczory</b>, aby jak najszybciej <b>cieszyć się jego efektami</b>.
+              </p>
+              <p class="mt-8 mb-4 fs-2">
+                <a href="#lesson-1" class="btn btn-primary btn-lg rounded-0 text-uppercase shadow">Zobacz co Cię czeka w kursie</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 p-3">
+            <div id="lesson-1" class="card shadow p-6">
+              <h3 class="mt-lg-6 mb-6 fw-bold fs-2">
+                💡 Lekcja 1: Wprowadzenie
+              </h3>
+              <dl class="fs-3">
+                  <dt></dt>
+                  <dd>Na początku poznasz swojego instruktora i jego doświadczenie w tej dziedzinie. Przedstawia on, czym jest ten kurs, dla kogo jest przeznaczony i jaki problem ma rozwiązać. Moduł ten zawiera również zarys struktury kursu i tego, czego możesz mogą się w nim spodziewać.</dd>
+                  
+                  <!-- <dt>🕣 Czas trwania</dt>
+                  <dd>5 minut</dd> -->
+                  
+                  <dt>📚 Czego się nauczysz</dt>
+                  <dd>Kim jest instruktor, jakie są cele kursu, grupa docelowa i rzeczywisty problem, który kurs ma rozwiązać. Zrozumieją również strukturę i przebieg kursu.</dd>
+          
+                  <dt>🎯 Kluczowe punkty</dt>
+                  <dd>
+                      <ul>
+                          <li>Przedstawienie instruktora i jego referencji.</li>
+                          <li>Omówienie celów kursu i jego struktury.</li>
+                      </ul>
+                  </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 p-3">
+            <div class="card shadow p-6">
+              <h3 class="mt-lg-6 mb-6 fw-bold fs-2">
+                💡 Lekcja 2: To nie jest kolejny kurs pisania prostych podpowiedzi w ChatGPT
+              </h3>
+              <dl class="fs-3">
+                  <dt></dt>
+                  <dd>Zrozumiesz czego można się spodziewać po tym kursie i czym różni się on od innych materiałów dostępnych na rynku.</dd>
+                  
+                  <!-- <dt>🕣 Czas trwania</dt>
+                  <dd>2 minut</dd> -->
+                  
+                  <dt>📚 Czego się nauczysz</dt>
+                  <dd>Co czeka Cię w najbliższych godzinach i jak dobrze przygotować się do nauki oraz wdrożenia wiedzy.</dd>
+          
+                  <dt>🎯 Kluczowe punkty</dt>
+                  <dd>
+                      <ul>
+                          <li>Jak ten kurs różni się od innych istniejących materiałów.</li>
+                          <li>Dlaczego ten kurs jest wyjątkowy i dlaczego uczestnik powinien go wdrożyć.</li>
+                          <li>Jak przygotować się do pracy z kursem.</li>
+                      </ul>
+                  </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 p-3">
+            <div id="lesson-3" class="card shadow p-6">
+              <h3 class="mt-lg-6 mb-6 fw-bold fs-2">
+                💡 Lekcja 3: Jak nigdy nie stracić pomysłów na nowe treści?
+              </h3>
+              <dl class="fs-3">
+                    <dt></dt>
+                    <dd>Dowiesz się czym jest matryca pomysłów na treść, jakie są jej zastosowania i zasady, które za nią stoją.</dd>
+                    
+                    <!-- <dt>🕣 Czas trwania</dt>
+                    <dd>7 minut</dd> -->
+                    
+                    <dt>📚 Czego się nauczysz</dt>
+                    <dd>Posiądziesz podstawowe zrozumienie matrycy pomysłów na treść i jej roli w tworzeniu treści</dd>
+            
+                    <dt>🎯 Kluczowe punkty</dt>
+                    <dd>
+                        <ul>
+                            <li>Zrozumienie koncepcji matrycy pomysłów dotyczących treści.</li>
+                            <li>Zastosowania i korzyści matrycy pomysłów dotyczących treści.</li>
+                            <li>Zasady tworzenia matrycy pomysłów dotyczących treści.</li>
+                            <li>Przykładowa matryca pmoysłów na treści</li>
+                        </ul>
+                    </dd>
+                </dl>
+              </div>
+          </div>
+          <div class="col-12 col-lg-6 p-3">
+            <div class="card shadow p-6">
+              <h3 class="mt-lg-6 mb-6 fw-bold fs-2">
+                💡 Lekcja 4: Korzystanie z Matrycy Pomysłów na Treść
+              </h3>
+              <dl class="fs-3">
+                  <dt></dt>
+                  <dd>Zyskasz pełne spojrzenie na różne elementy matrycy pomysłów na treści i sposób, w jaki łączą się one w celu generowania unikalnych pomysłów.</dd>
+                  
+                  <!-- <dt>🕣 Czas trwania</dt>
+                  <dd>10 minut</dd> -->
+                  
+                  <dt>📚 Czego się nauczysz</dt>
+                  <dd>Jak efektywnie analizować i pracować z matrycą pomysłów dotyczących treści.</dd>
+          
+                  <dt>🎯 Kluczowe punkty</dt>
+                  <dd>
+                      <ul>
+                          <li>Analiza różnych elementów Matrycy Pomysłów na Treści.</li>
+                          <li>Jak wykorzystać te elementy do generowania unikalnych pomysłów.</li>
+                          <li>Praktyczne przykłady wykorzystania matrycy pomysłów na treści.</li>
+                          <li>Tworzenie własnej matrycy.</li>
+                      </ul>
+                  </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 p-3">
+            <div class="card shadow p-6">
+              <h3 class="mt-lg-6 mb-6 fw-bold fs-2">
+                💡 Lekcja 5: Wprowadzenie do ChatGPT
+              </h3>
+              <dl class="fs-3">
+                  <dt></dt>
+                  <dd>Dowiesz się czym jest ChatGPT, jak działa i jak efektywnie można go wykorzystać do generowania pomysłów na treści.</dd>
+                  
+                  <!-- <dt>🕣 Czas trwania</dt>
+                  <dd>10 minut</dd> -->
+                  
+                  <dt>📚 Czego się nauczysz</dt>
+                  <dd>Podstawy ChatGPT, jego funkcjonalność i zastosowania w tworzeniu treści.</dd>
+          
+                  <dt>🎯 Kluczowe punkty:</dt>
+                  <dd>
+                      <ul>
+                          <li>Zrozumienie technologii stojącej za ChatGPT.</li>
+                          <li>Zrozumienie dobrych praktyk korzystania ChatGPT.</li>
+                          <li>Zastosowania ChatGPT w tworzeniu treści.</li>
+                      </ul>
+                  </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 p-3">
+            <div class="card shadow p-6">
+              <h3 class="mt-lg-6 mb-6 fw-bold fs-2">
+                💡 Lekcja 6: Matrycy Pomysłów na Treść wspierana przez ChatGPT
+              </h3>
+              <dl class="fs-3">
+                <dt></dt>
+                <dd>Poznasz szczegółowy opis korzystania z ChatGPT w połączeniu z Matrycą Pomysłów na Treści do tworzenia angażujących i unikalnych tematów.</dd>
+                
+                <!-- <dt>🕣 Czas trwania</dt>
+                <dd>10 minut</dd> -->
+                
+                <dt>📚 Czego się nauczysz</dt>
+                <dd>Praktyczne zrozumienie integracji ChatGPT i Matrycy Pomysłów na Treści w celu efektywnego tworzenia treści.</dd>
+        
+                <dt>🎯 Kluczowe punkty</dt>
+                <dd>
+                    <ul>
+                        <li>Integracja ChatGPT i Matrycy Pomysłów na Treści.</li>
+                        <li>Praktyczny przykład tworzenia treści przy użyciu ChatGPT i Matrycy Pomysłów na Treści.</li>
+                        <li>Najlepsze praktyki podczas korzystania z ChatGPT i Matrycy Pomysłów na Treści.</li>
+                    </ul>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 p-3">
+            <div class="card shadow p-6">
+              <h3 class="mt-lg-6 mb-6 fw-bold fs-2">
+                💡 Lekcja 7: Wprowadzenie do automatyzacji
+              </h3>
+              <dl class="fs-3">
+                  <dt></dt>
+                  <dd>Zobaczysz sposoby wykorzystania narzędzi no-code do automatyzacji procesu generowania treści, wraz z prealnymi rzykładami.</dd>
+                  
+                  <!-- <dt>🕣 Czas trwania</dt>
+                  <dd>15 minut</dd> -->
+                  
+                  <dt>📚 Czego się nauczysz</dt>
+                  <dd>Podstawowa wiedza na temat narzędzi do automatyzacji i ich roli w generowaniu treści.</dd>
+          
+                  <dt>🎯 Kluczowe punkty</dt>
+                  <dd>
+                      <ul>
+                          <li>Przegląd narzędzi do automatyzacji: Make, Airtable i OpenAI API.</li>
+                          <li>Demonstracja procesu automatyzacji na rzeczywistych przykładach.</li>
+                          <li>Praktyczne ćwiczenia z automatyzacji.</li>
+                      </ul>
+                  </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 p-3">
+            <div class="card shadow p-6">
+              <h3 class="mt-lg-6 mb-6 fw-bold fs-2">
+                💡 Lekcja 8: Tworzymy własną Inteligentną Fabrykę Pomysłów
+              </h3>
+              <dl class="fs-3">
+                  <dt></dt>
+                  <dd>PRzejdziesz krok po kroku przez proces konfigurowania zautomatyzowanego systemu generowania treści przy użyciu OpenAI API, Make i Airtable.</dd>
+                  
+                  <!-- <dt>🕣 Czas trwania</dt>
+                  <dd>15 minut</dd> -->
+                  
+                  <dt>📚 Czego się nauczysz</dt>
+                  <dd>Jak połączyć wszystkie poznane wcześniej narzędzia i koncepty w celu stworzenia własnego generatora ponysłów.</dd>
+          
+                  <dt>🎯 Kluczowe punkty</dt>
+                  <dd>
+                      <ul>
+                          <li>Proces konfiguracji systemu automatycznego generowania treści.</li>
+                          <li>Rozwiązywanie typowych problemów.</li>
+                          <li>Najlepsze praktyki korzystania i modernizowania stworzonego systemu.</li>
+                      </ul>
+                  </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 p-3">
+            <div class="card shadow p-6">
+              <h3 class="mt-lg-6 mb-6 fw-bold fs-2">
+                  💡 Lekcja 9: Jak dalej możesz wykorzystać swoją Inteligentną Fabrykę Ponysłów
+              </h3>
+              <dl class="fs-3">
+                  <dt></dt>
+                  <dd>Zobaczysz podsumowanie kursu, jego kluczowe wnioski i omówienie potencjalnych kolejnych kroków dla studentów.</dd>
+                  
+                  <!-- <dt>🕣 Czas trwania</dt>
+                  <dd>5 minut</dd> -->
+                  
+                  <dt>📚 Czego się nauczysz</dt>
+                  <dd>Przegląd kluczowych punktów kursu i wskazówki dotyczące przyszłych zastosowań.</dd>
+          
+                  <dt>🎯 Kluczowe punkty</dt>
+                  <dd>
+                      <ul>
+                          <li>Podsumowanie kursu i jego kluczowe wnioski.</li>
+                          <li>Potencjalne sposoby wykorzystania wiedzy zdobytej podczas kursu.</li>
+                          <li>Omówienie potencjalnych kolejnych kroków dla studenta.</li>
+                      </ul>
+                  </dd>
+              </dl>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Testimonials -->
+        <section class="flex row justify-content-lg-between py-10 pb-lg-20 border-bottom border-dark-3">
+          <div class="col-12">
+            <p class="mt-lg-4 mt-4 fs-2">
+              a jeśli nadal się wachasz to poznaj
+            </p>
+            <h2 class="display-8 text-uppercase fs-1 pb-6">
+              Opinie Moich Byłych Studentów oraz Klientów
+            </h2>
+          </div>
+          <div class="col-12 testimonial-list">
+            <div class="flex row justify-content-lg-between align-content-stretch">
+              <div class="col-12 col-lg-4 fs-3 mb-4 p-4">
+                <div class="card shadow p-4">
+                  <p class="fs-4 author-stars mb-2">★★★★★</p>
+                  <blockquote class="fs-4"><i>"Szymon wykonał genialną robotę, przekazując skomplikowaną wiedzę w prosty sposób, zrozumiały dla osób nietechnicznych.."</i></blockquote>
+                  <div class="author-info mt-2">
+                      <img src="./landing_marketing_files/student1.png" alt="Łukasz Kucha" class="author-photo">
+                      <div>
+                          <p class="author-name fs-3">Łukasz Kucha</p>
+                          <p class="author-position fs-4">Marketer w <b>Automation House</b></p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4 fs-3 mb-3 p-4">
+                <div class="card shadow p-4">
+                  <p class="fs-4 author-stars mb-2">★★★★★</p>
+                  <blockquote class="fs-4"><i>"Kurs super, informacji dużo, bardzo dużo i treściwej, wymaga masy przemysleń..."</i></blockquote>
+                  <div class="author-info mt-2">
+                      <div class="author-photo"></div>
+                      <div>
+                          <p class="author-name fs-3">Krzysztof Goertz</p>
+                          <p class="author-position fs-4">CEO w <b>Vitrodent</b></p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4 fs-3 mb-3 p-4">
+                <div class="card shadow p-4">
+                  <p class="fs-4 author-stars mb-2">★★★★★</p>
+                  <blockquote  class="fs-4"><i>"Szymon potrafi tłumaczyć zawiłe rzeczy w prosty sposób a swoje opinie klarownie argumentuje..."</i></blockquote>
+                  <div class="author-info mt-2">
+                      <img src="./landing_marketing_files/student3.png" alt="Łukasz Kaczmarek" class="author-photo">
+                      <div>
+                          <p class="author-name fs-3">Łukasz Kaczmarek</p>
+                          <p class="author-position fs-4">CEO w <b>Osom Studio</b></p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            <div class="col-12 col-lg-4 fs-3 mb-3 p-4">
+              <div class="card shadow p-4">
+                <p class="fs-4 author-stars mb-2">★★★★★</p>
+                <blockquote  class="fs-4"><i>"Wiedza jak i zaangażowanie w pomocy na jak najwyższym poziomie."</i></blockquote>
+                <div class="author-info mt-2">
+                    <img src="./landing_marketing_files/student4.png" alt="Krystian Buras" class="author-photo">
+                    <div>
+                        <p class="author-name fs-3">Krystian Buras</p>
+                        <p class="author-position fs-4">CEO w <b>Dom z Bitcoina</b></p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 fs-3 mb-3 p-4">
+              <div class="card shadow p-4">
+                <p class="fs-4 author-stars mb-2">★★★★★</p>
+                <blockquote class="fs-4"><i>"Bardzo wartościowy kurs, świetnie ułożony tematycznie, odpowiednio wyważony pomiędzy wiedzą teoretyczną, praktyką..."</i></blockquote>
+                <div class="author-info mt-2">
+                    <img src="./landing_marketing_files/student5.jpeg" alt="Łukasz Pach" class="author-photo">
+                    <div>
+                        <p class="author-name fs-3">Łukasz Pach</p>
+                        <p class="author-position fs-4">CEO @ <b>ADream</b></p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 fs-3 mb-3 p-4">
+              <div class="card shadow p-4">
+                <p class="fs-4 author-stars mb-2">★★★★★</p>
+                <blockquote class="fs-4 mb-2"><i>"Szymon to praktyk o podejściu, na którym zależy każdemu przedsiębiorcy poszukującemu partnerów biznesowych."</i></blockquote>
+                <div class="author-info mt-2">
+                    <img src="./landing_marketing_files/student6.png" alt="Grzego Gracz" class="author-photo">
+                    <div>
+                        <p class="author-name fs-3">Grzegorz Gracz</p>
+                        <p class="author-position fs-4">Załozyciel <b>Digital First AI</b></p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </section>  
+        <!-- About Me -->
+        <section class="flex row justify-content-lg-between align-items-center py-10 py-lg-20 border-bottom border-dark-3">
+            <div class="col-12 col-lg-6">
+              <h2 class="display-8 text-uppercase fs-1 pb-6">
+                oraz swojego przewodnika po świecie nowoczesnych technologii
+              </h2>
+              <p class="mt-lg-4 mb-4 fs-2">
+                Jestem <b>przedsiębiorcą technologicznym z niemal 10-letnim doświadczeniem</b>.
+              </p>
+              <p class="mt-lg-4 mb-4 fs-2">
+                W roli strategicznego konsultanta pomagam <b>firmom wdrażać najnowocześniejsze technologie</b>, aby zdobyć przewagę na rynku - głównie <b>AI, Blockchain, Web3, NFT i automatyzację No-Code</b>.
+              </p>
+                <p class="mt-lg-4 mb-4 fs-2">
+                  Tworzyłem innowacje dla takich firm jak: 
+                </p>
+                <div class="mt-lg-4 mb-4 fs-2">
+                  <img src="./landing_marketing_files/logos.png" srcset="./landing_marketing_files/logos.png 2x" alt="" class="img img-fluid mx-auto d-block">
+                </div>
+                <p class="mt-lg-4 mb-4 fs-2">
+                  i wielu innych.
+
+                </p>
+                <p class="mt-lg-4 mb-4 fs-2">
+                  <b>Regularnie prowadzę szkolenia i wystąpienia publiczne</b>, nie raz przed publicznością liczącą setki osób. 
+                </p>
+                <p class="mt-lg-4 mb-4 fs-2">
+                  Jestem częstym gościem w <b>podcastach i panelach dyskusyjnych</b>.
+                </p>
+            </div>
+            <div class="col-12 col-lg-6 pb-4">
+              <img src="./landing_marketing_files/keynotes.png" srcset="./landing_marketing_files/keynotes.png 2x" alt="" class="img img-fluid mx-auto d-block">
+            </div>
+        </section>
+        <!-- Bonsuses -->
+        <section class="flex row justify-content-lg-between align-content-stretch py-10 py-lg-20 border-bottom border-dark-3">
+          <div class="col-12">
+            <p class="mt-lg-4 mt-4 fs-2">
+              <b>Poczekaj To nie wszystko.</b> Dołączając teraz otrzymasz w pakiecie również
+            </p>
+            <h2 class="display-8 text-uppercase fs-1 pb-6">
+              4 nisamowite bonusy
+            </h2>
+            <p class="mt-lg-4 mb-4 fs-2">
+                Każdy kurs daje wiedzę, ale <b>my idziemy o krok dalej</b>.
+            </p>
+            <p class="mt-lg-4 mb-4 fs-2">
+                Oprócz głównych modułów "Inteligentnej Fabryki Pomysłów", otrzymasz także <b>wartościowe bonusy</b>, które podniosą Twoją efektywność i kreatywność na zupełnie nowy poziom.
+            </p>
+            <p class="mt-lg-4 mb-4 fs-2">    
+                <b>Zobacz, jakie niespodzianki przygotowałem dla Ciebie</b>:
+            </p>
+          </div>
+          <div class="col-12 col-lg-6 mb-4 p-3">
+            <div class="card shadow p-6">
+              <h3 class="mt-lg-6 mb-6 fw-bold fs-2">
+                ⭐️ eBook "ChatGPT Conversation Strategies"
+              </h3>
+              <dl class="mb-3 fs-2">
+                <dt></dt>
+                <dd>Ten cyfrowy przewodnik zawiera sprawdzone strategie i techniki, które pomogą Ci znacznie poprawić jakość odpowiedzi generowanych przez ChatGPT. Dzięki temu możesz prowadzić bardziej płynne i sensowne rozmowy z modelem AI.</dd>
+                
+                <dt>💰 Wartość</dt>
+                <dd>300zł</dd>
+              </dl>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 mb-4 p-3">
+            <div class="card shadow p-6">
+              <h3 class="mt-lg-6 mb-6 fw-bold fs-2">
+                ⭐️ Przewodnik "MidJourney StyleGEN"
+              </h3>
+              <dl class="mb-3 fs-2">
+                <dt></dt>
+                <dd>Odkryj, jak wykorzystać MidJourney do tworzenia obrazów w konkretnych stylach. Ten przewodnik zawiera praktyczne kroki, które umożliwią Ci szybkie i łatwe dostosowywanie obrazów zgodnie z wybranym stylem.</dd>
+                <dt>💰 Wartość</dt>
+                <dd>300zł</dd>
+              </dl>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 mb-4 p-3">
+            <div class="card shadow p-6">
+              <h3 class="mt-lg-6 mb-6 fw-bold fs-2">
+                ⭐️ Dodatkowe lekcje rozszerzające kurs
+              </h3>
+              <dl class="mb-3 fs-2">
+                <dt></dt>
+                <dd>Otrzymasz dodatkowe lekcje, które nie tylko pokażą Ci, jak generować pomysły, ale także jak tworzyć przykładowe treści w wielu językach. Dzięki temu będziesz w stanie dotrzeć do szerszej międzynarodowej publiczności.</dd>
+                <dt>💰 Wartość</dt>
+                <dd>400zł</dd>
+              </dl>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 mb-4 p-3">
+            <div class="card shadow p-6">
+              <h3 class="mt-lg-6 mb-6 fw-bold fs-2">
+                ⭐️ Instrukcja "GPT-4 bez SUBSKRYPCJI PRO"
+              </h3>
+              <dl class="mb-3 fs-2">
+                <dt></dt>
+                <dd>Dowiedz się, jak w pełni wykorzystać możliwości GPT-4, nie płacąc za miesięczną subskrypcję PRO. Znajdziesz w niej wskazówki i triki, które pozwolą Ci zaoszczędzić pieniądze i cieszyć się pełnym potencjałem GPT-4.</dd>
+                <dt>💰 Wartość</dt>
+                <dd>~960zł</dd>
+              </dl>
+            </div>
+          </div>
+        </section>
+        <!-- Offer -->
+        <section class="flex row justify-content-lg-between py-10 border-bottom border-dark-3">
+          <div class="col-12 mt-lg-5">
+            <div class="sales-block p-4 bg-light text-center ">
+              <h3 class="text-uppercase text-center fs-1 pb-2">
+                Wartość tych bonusów to prawie
+              </h3>
+              <h3 class="text-center fs-1 mb-3">
+                <span class="c-cta">2000zł</span>
+              </h3>
+                <p class="fs-4 text-center">
+                    *Chcę, aby docelowo były one dostępne dla każdego w swojej podstawowej cenie.
+                </p>
+                <p class="text-center fs-1 py-6">
+                    Aktualnie dostępne są razem z kursem w pakiecie o wartości:
+                    <br />
+                    <span class="c-cta"><s>899zł</s></span>
+                </p>
+                <h2 class="mt-lg-4 mt-4 text-uppercase text-center fs-1 pt-6 pb-2">
+                    Ale dzisiaj, tylko dla osób, które uczestniczyły w webinarze, 
+                    <br />
+                    mam specjalną ofertę. Cały pakiet dostępny za jedyne:
+                </h2>
+                <h2 class="text-center fs-1 mb-3">
+                    !!! <span class="c-primary">499zł</span> !!!
+                </h2>
+                <p class="fs-2 text-center pb-4">
+                  To mój sposób, by podziękować za Twój czas i zaangażowanie.
+                </p>
+                <a href="https://app.easycart.pl/checkout/45947452/kurs-inteligentna-fabryka-pomyslow" class="btn btn-primary btn-lg rounded-0 text-uppercase shadow">Dołącz teraz!</a>
+                <p class="promo-text mt-lg-4 mt-4 text-uppercase text-center fs-1 pt-6 c-cta">
+                  Koniec promocji o 23:59
+                </p>
+                
+                
+            </div>
+          </div>
+        </section>
+        <section class="flex row justify-content-lg-between align-items-center py-10 py-lg-20 border-bottom border-dark-3">
+          <div class="col-12 col-lg-6">
+            <img src="./landing_marketing_files/gwarancja.png" srcset="./landing_marketing_files/gwarancja.png 2x" alt="" class="img img-fluid mx-auto d-block">
+          </div>
+          <div class="col-12 col-lg-6">
+            <h2 class="display-8 text-uppercase fs-1 py-6">
+              Gwarancja satysfakcji
+            </h2>
+            <p class="mt-lg-4 mb-4 fs-2">
+              <b>Chcę, abyś czuł się pewnie</b>, inwestując w ten kurs. 
+            </p>
+            <p class="mt-lg-4 mb-4 fs-2">  
+              Dlatego oferuję Ci <b>gwarancję pwłnego zwrotu pieniędzy w ciągu 30 dni</b> od zakupu kursu, jeśli nie będziesz w pełni zadowolony. 
+            </p>
+            <p class="mt-lg-4 mb-4 fs-2">  
+              Tak bardzo wierzę w wartość, którą przekazuję w tym kursie, że jestem gotów <b>zwrócić Ci każdą złotówkę</b>, jeśli poczujesz, że nie spełniłem Twoich oczekiwań. 
+            </p>
+            <p class="mt-lg-4 mb-4 fs-2">   
+              <b>Twoje zadowolenie i postępy są dla mnie priorytetem</b>, dlatego chcę, byś czuł się komfortowo i pewnie w swojej decyzji. 
+            </p>
+            <p class="mt-lg-4 mb-4 fs-2">
+              Daj mi szansę przekonać Cię do wartości tego kursu, a jeśli z jakiegoś powodu poczujesz, że to nie dla Ciebie - <b>zwrócę Ci pieniądze</b>.
+            </p>
+            <p class="mt-lg-4 mb-4 fs-2">  
+              <b>Bez pytań</b>!
+            </p>
+          </div>
+      </section>
+      <!-- FAQ -->
+      <section class="flex row justify-content-lg-between py-10">
+        <div class="col-12">
+          <h2 class="display-8 text-uppercase fs-1 pb-6">
+            Najczęściej zadawane pytania (FAQ)
+          </h2>
+            <ul class="mt-lg-4 mb-4 fs-2">
+                <li>
+                    <strong>Czy poradzę sobie technicznie?</strong><br />
+                    Tak, kurs został przygotowany z myślą o osobach, które nie muszą znać podstaw programowania.
+                </li>
+                <li>
+                    <strong>Czy kurs będzie dostępny na zawsze?</strong><br />
+                    Tak, materiały są dostępne do czytania oraz do pobrania. Masz do nich dostęp na całe życie.
+                </li>
+                <li>
+                    <strong>Czy będzie wsparcie podczas trwania kursu?</strong><br />
+                    Tak, jest dedykowana grupa na Facebooku dla uczestników kursu.
+                </li>
+                <li>
+                    <strong>Z jakich narzędzi będziemy korzystać?</strong><br />
+                    Airtable, Make.com (dawniej Integromat), ChatGPT i OpenAI API. Dodatkowo, MidJourney.
+                </li>
+                <li>
+                    <strong>Czy te narzędzia są płatne?</strong><br />
+                    W praktyce płatne są tylko OpenAI API i MidJourney w wersji rozszerzonej. Podstawowa wersja kursu nie powinna przekroczyć kosztów 2/3 złotych miesięcznie.
+                </li>
+                <li>
+                    <strong>Ile czasu potrzebuję na ten kurs?</strong><br />
+                    Sam materiał trwa około 1,5 godziny. Z wdrożeniem powinieneś być w stanie zakończyć cały kurs w ciągu 3/4 wieczorów.
+                </li>
+                <li>
+                    <strong>Czy to tylko teoria?</strong><br />
+                    Nie, to kurs praktyczny. Oprócz kursu uczestnicy otrzymają również e-booki z większą ilością teorii na temat działania AI.
+                </li>
+                <li>
+                    <strong>Czy dostanę gotowe komendy do wklejenia?</strong><br />
+                    Tak, ale kurs nie jest kolejnym "zestawem poleceń". Chcę, abyś rozumiał, jak działają narzędzia i mógł korzystać z nich jak najefektywniej.
+                </li>
+                <li>
+                    <strong>Dlaczego akurat ten kurs?</strong><br />
+                    Bo żyjemy w erze cyfrowej, gdzie technologia, szczególnie sztuczna inteligencja, radykalnie zmienia sposób, w jaki działamy. Ten kurs jest owocem mojej dekady doświadczeń, badań i praktyki. Chcę podzielić się z Tobą tym, co najlepsze, abyś mógł stać się bardziej efektywny, twórczy i gotowy na wyzwania przyszłości. Zamiast szukać setek źródeł, wszystko, czego potrzebujesz, znajduje się tutaj.
+                </li>
+                <li>
+                  <strong>Kiedy kurs będzie dla mnie dostępny?</strong><br />
+                 Kurs powinien zostac udostępniony na początku września. Planuję miły prezent na moje 32 urodziny, które odbywają się 11 września.
+              </li>
+            </ul>
+            <div class="text-center">
+              <h3 class="display-8 text-uppercase fs-1 py-6">Gotowy, aby rozpocząć przygodę w świecie cyfrowego tworzenia treści?</h3>
+              <p class="mt-lg-4 mb-8 fs-2 text-cente">
+                  Dołącz do nas i odkryj moc technologii, która czeka, by Cię zmienić!
+              </p>
+              <a href="https://app.easycart.pl/checkout/45947452/kurs-inteligentna-fabryka-pomyslow" class="btn btn-primary btn-lg rounded-0 text-uppercase shadow">Dołącz teraz!</a> 
+            </div>
+        </div>
+      </section>
+
+      <!-- Chat -->
+    <div id="chat-container"></div>
+    
+      
+    </div>
+    <div class="fixed-bottom row flex align-items-center justify-content-center">
+      <div class="col-12 col-lg-3 navigation text-center shadow-lg">
+        <p class="mt-2 mb-1 fs-4">Pełna cena: <span class="c-cta"><s>899zł</s></span></p>
+        <h2 class="text-center fw-bold fs-2 pb-2">Przedsprzedaż: <span class="c-primary">499zł</span></h2>
+        <a href="https://app.easycart.pl/checkout/45947452/kurs-inteligentna-fabryka-pomyslow" class="btn btn-primary btn rounded-0 text-uppercase mb-2">Przejdź do koszyka</a> 
+      </div>
+    </div>
+    <footer class="pb-md-3 py-3 text-center ">
+      <div class="container mb-20">
+        <div class="mt-10 mb-8 border-bottom border-dark-3"></div>
+        <p class="fs-5 mb-0">
+          Copyright © 2023 szymonpaluch.com
+        </p>
+        <p class="fs-5 pb-20">
+          <a href="https://szymonpaluch.com/inteligentna-fabryka-pomyslow/landing_marketing_files/regulamin-swiadczenia-uslug.pdf" target="_blank">Regulamin</a> | 
+          <a href="https://szymonpaluch.com/inteligentna-fabryka-pomyslow/landing_marketing_files/polityka-prywantosci.pdf" target="_blank">Polityka Rrywatności</a>
+        </p>
+      </div>
+    </footer>
+    <script>
+      var scrollArrow = document.getElementById('scroll-arrow');
+
+      scrollArrow.addEventListener('click', function() {
+          window.scrollBy({
+              top: window.innerHeight * 0.75, // scroll down by the height of the viewport
+              behavior: 'smooth'
+          });
+
+          // Hide the arrow after it is clicked
+          this.style.visibility = 'hidden';
+      });
+
+      window.addEventListener('scroll', function() {
+          // Hide the arrow when the page is scrolled
+          scrollArrow.style.visibility = 'hidden';
+      });
+    </script>
+    <script>
+        function ml_webform_success_6504910() {
+        try {
+            window.top.location.href = 'https://szymonpaluch.com/content-ai/podziekowanie';
+          } catch (e) {
+            window.location.href = 'https://szymonpaluch.com/content-ai/podziekowanie';
+          }
+        }
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+
+      function updatePromoText() {
+          const now = new Date();
+          const currentHour = now.getHours();
+          const currentMinute = now.getMinutes();
+          const currentSecond = now.getSeconds();
+
+          // Between 11:59 p.m. and 6 a.m.
+          if (currentHour >= 23 && currentMinute >= 59 || currentHour < 6) {
+              return "Koniec promocji";
+          }
+
+          // Calculate remaining time
+          const remainingHours = 23 - currentHour;
+          const remainingMinutes = 59 - currentMinute;
+          const remainingSeconds = 59 - currentSecond;
+
+          return "Koniec promocji za " + remainingHours + ":" +
+                String(remainingMinutes).padStart(2, '0') + ":" +
+                String(remainingSeconds).padStart(2, '0');
+      }
+
+      function setPromoTextToAllElements() {
+          const promoElements = document.querySelectorAll('.promo-text');
+          const text = updatePromoText();
+          promoElements.forEach(el => el.textContent = text);
+      }
+
+      // Initial set
+      setPromoTextToAllElements();
+
+      // Update every second
+      setInterval(setPromoTextToAllElements, 1000);
+
+      });
+
+    </script>
+    <script>
+      let modal = document.getElementById("videoModal");
+      let triggers = document.querySelectorAll(".btn-video");
+      let video = document.getElementById("video");
+      let span = document.getElementsByClassName("close")[0];
+
+      for(let trigger of triggers) {
+        trigger.onclick = function(e) {
+          e.preventDefault();
+          modal.style.display = "flex";
+          video.play();
+        }
+      }
+
+
+      span.addEventListener('click', function() {
+          modal.style.display = "none";
+          video.pause();
+      });
+
+      window.onclick = function(event) {
+        if (event.target === modal) {
+          console.log('hello');
+          modal.style.display = "none";
+          video.pause();
+        }
+      }
+
+    </script>
+    <script src="./landing_marketing_files/chat.js" type="text/javascript"></script>  
+  </body>
+</html>
