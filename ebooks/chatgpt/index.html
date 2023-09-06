@@ -194,6 +194,10 @@
           height: 100%;
       }
 
+      #navigation {
+        display: none;
+      }
+
 
     </style>
     <meta name="twitter:card" content="summary_large_image"></meta>
@@ -252,7 +256,7 @@
               <div class="modal-content">
                   <span class="close">&times;</span>
                   <video id="video" controls>
-                      <source src="https://d2mltfd1m3829p.cloudfront.net/marketing-ai/bonus.mp4" type="video/mp4">
+                      <source src="https://d2mltfd1m3829p.cloudfront.net/marketing-ai/ebooks-chatgpt.mp4" type="video/mp4">
                       Twoja przeglądarka nie obsługuje elemntu wideo.
                   </video>
               </div>
@@ -264,7 +268,7 @@
           </div>
           <div class="col-12 col-lg-6">
             <h2 class="display-8 text-uppercase fs-2 py-6">
-              Teraz to nie problem, pokażę Ci jak to zrobić z&nbsp;moim e-bookiem.
+              Teraz to nie problem, pokażę Ci jak to zrobić z&nbsp;moim e-&nbsp;bookiem.
             </h2>
             <p class="mt-4 mb-4 fs-2">
               Prowadzenie biznesu internetowego totalnie się zmieniło.
@@ -357,7 +361,7 @@
                   by jak najwięcej osób mogło skorzystać z tej cyfrowej rewolucji 
                 </p>
                 <p class="mt-8 mb-4 fs-2 text-center">
-                  <a href="#lesson-1" class="btn btn-primary btn-lg rounded-0 text-uppercase shadow">Biorę to i działam!</a>
+                  <a href="/ebooks/midjourney" class="btn btn-primary btn-lg rounded-0 text-uppercase shadow">Biorę to i działam!</a>
                 </p>                
               </div>
               <div class="col-12 col-lg-6">
@@ -509,7 +513,7 @@
                 </p>
 
                 <p class="mt-8 mb-4 fs-2 text-center">
-                  <a href="#lesson-1" class="btn btn-primary btn-lg rounded-0 text-uppercase shadow">Tak, chcę używać AI niczym profesjonalista</a>
+                  <a href="/ebooks/midjourney" class="btn btn-primary btn-lg rounded-0 text-uppercase shadow">Tak, chcę używać AI niczym profesjonalista</a>
                 </p>  
               </div>
               <div class="col-12 col-lg-6">
@@ -598,7 +602,7 @@
               Wierzę, że podejmiesz dla siebie najlepszą możliwą decyzję.
             </h3> 
             <p class="mt-8 mb-4 fs-2">
-              <a href="#lesson-1" class="btn btn-primary btn-lg rounded-0 text-uppercase shadow">Kupuję!</a>
+              <a href="/ebooks/midjourney" class="btn btn-primary btn-lg rounded-0 text-uppercase shadow">Kupuję!</a>
             </p>  
           </div>
         </section>
@@ -659,7 +663,7 @@
               <b>Jednak jestem przekonany, że tak się nie stanie, ponieważ wiem, ile ten e-book Ci pomoże. 💪</b>
             </p>
             <p class="mt-8 mb-4 fs-2 text-center">
-              <a href="#lesson-1" class="btn btn-primary btn-lg rounded-0 text-uppercase shadow">Chcę zacząć już teraz</a>
+              <a href="/ebooks/midjourney" class="btn btn-primary btn-lg rounded-0 text-uppercase shadow">Chcę zacząć już teraz</a>
             </p>  
           </div>
         </section>
@@ -669,7 +673,7 @@
             <div class="sales-block p-4 bg-light text-center ">
               <h2 class="text-uppercase text-center fs-1 pb-2">
                 Tak naprawdę nie ryzykujesz nic
-              </h2>
+              </h2> 
               <p class="mt-lg-4 mb-4 fs-2">
                 Jeśli wiedza z tego e-booka pozwoli Ci zaoszczędzić 10 godzin tygodniowo, <br />
                 <b>to w miesiącu mamy 40 odzyskanych godzin.</b>
@@ -691,7 +695,7 @@
                 Teraz jest najlepszy moment, by zacząć i zostawić konkurencję daleko w tyle!
               </p>
               <p class="mt-8 mb-4 fs-2">
-                <a href="#lesson-1" class="btn btn-primary btn-lg rounded-0 text-uppercase shadow">Tak, to dla mnie!</a>
+                <a href="/ebooks/midjourney" class="btn btn-primary btn-lg rounded-0 text-uppercase shadow">Tak, to dla mnie!</a>
               </p>
 
             </div>
@@ -703,11 +707,11 @@
      -->
       
     </div>
-    <div class="fixed-bottom row flex align-items-center justify-content-center">
+    <div id="navigation" class="fixed-bottom row flex align-items-center justify-content-center">
       <div class="col-12 col-lg-3 navigation text-center shadow-lg">
         <p class="mt-2 mb-1 fs-4">Pełna cena: <span class="c-cta"><s>200zł</s></span></p>
         <h2 class="text-center fw-bold fs-2 pb-2">Promocja: <span class="c-primary">99zł</span></h2>
-        <a href="https://app.easycart.pl/checkout/45947452/kurs-inteligentna-fabryka-pomyslow" class="btn btn-primary btn rounded-0 text-uppercase mb-2">Przejdź do koszyka</a> 
+        <a href="/ebooks/midjourney" class="btn btn-primary btn rounded-0 text-uppercase mb-2">Przejdź do koszyka</a> 
       </div>
     </div>
     <footer class="pb-md-3 py-3 text-center ">
@@ -724,13 +728,13 @@
     </footer>
     <script>
       var scrollArrow = document.getElementById('scroll-arrow');
+      var navigation = document.getElementById("navigation");
 
       scrollArrow.addEventListener('click', function() {
           window.scrollBy({
               top: window.innerHeight * 0.75, // scroll down by the height of the viewport
               behavior: 'smooth'
           });
-
           // Hide the arrow after it is clicked
           this.style.visibility = 'hidden';
       });
@@ -738,6 +742,7 @@
       window.addEventListener('scroll', function() {
           // Hide the arrow when the page is scrolled
           scrollArrow.style.visibility = 'hidden';
+          navigation.style.display = "flex";
       });
     </script>
     <script>
@@ -789,10 +794,11 @@
 
     </script>
     <script>
-      let modal = document.getElementById("videoModal");
-      let triggers = document.querySelectorAll(".btn-video");
-      let video = document.getElementById("video");
-      let span = document.getElementsByClassName("close")[0];
+      var modal = document.getElementById("videoModal");
+      var triggers = document.querySelectorAll(".btn-video");
+      var video = document.getElementById("video");
+      var navigation = document.getElementById("navigation");
+      var span = document.getElementsByClassName("close")[0];
 
       for(let trigger of triggers) {
         trigger.onclick = function(e) {
@@ -805,6 +811,7 @@
 
       span.addEventListener('click', function() {
           modal.style.display = "none";
+          navigation.style.display = "flex";
           video.pause();
       });
 
@@ -812,6 +819,7 @@
         if (event.target === modal) {
           console.log('hello');
           modal.style.display = "none";
+          navigation.style.display = "flex";
           video.pause();
         }
       }
