@@ -317,7 +317,7 @@
         // The full text
         longTextElement.innerHTML = 'Witaj! W drugiej lekcji naszego kursu "Inteligentna Fabryka Pomysłów" przybliżę Ci, dlaczego ten kurs różni się od innych. Dowiesz się, dlaczego gotowe bazy promptów nie są skutecznym rozwiązaniem i jak wykorzystać narzędzia sztucznej inteligencji do generowania treści dopasowanych do Twojego biznesu. Ten kurs to trzy w jednym: praktyczna wiedza, rozwiązanie problemu generowania treści i narzędzia automatyzujące cały proces. Przygotuj się na odkrycie nowych technik kreatywnego myślenia i generowania dużych ilości treści!';
         
-        window.toggleText = function(e) {
+        readMoreBtn.onclick = function(e) {
             e.preventDefault();
             if (longTextElement.style.display === 'none' || longTextElement.style.display === '') {
             longTextElement.style.display = 'block';

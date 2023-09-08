@@ -317,7 +317,7 @@
         // The full text
         longTextElement.innerHTML = 'Witaj! W tym nagraniu rozmawiam o interfejsie z modelem GPT, który jest wersją 3.0. Wyjaśniam, czym różni się ten model od chatu GPT. Model GPT to mózg sztucznej inteligencji, który analizuje tekst i dostarcza odpowiedzi. Omawiam również różnice między wersją 3.0 a 4.0 oraz dlaczego wersja 4.0 jest bardziej zaawansowana. Pokazuję przykłady związane z suszeniem koszul i wyjaśniam, jak model tworzy odpowiedzi na podstawie prawdopodobieństwa. Przedstawiam również narzędzia, takie jak DeepL i Google Translate, które mogą być przydatne w komunikacji z modelem. Zapraszam do obejrzenia!';
         
-        window.toggleText = function(e) {
+        readMoreBtn.onclick = function(e) {
             e.preventDefault();
             if (longTextElement.style.display === 'none' || longTextElement.style.display === '') {
             longTextElement.style.display = 'block';

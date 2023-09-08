@@ -254,7 +254,7 @@
                         <div id="longText" class="mt-4 mb-1 fs-2" style="display:none;">
                             <!-- Your original long text here... -->
                         </div>
-                        <a href="#" id="readMoreBtn" onclick="toggleText()" class="mt-1 mb-5 fs-2">Czytaj więcej</a>
+                        <a href="#" id="readMoreBtn" class="mt-1 mb-5 fs-2">Czytaj więcej</a>
                     </div>
                     <h2 class="display-8 text-uppercase fs-2 mt-6 mb-4">
                         Zadania
@@ -317,7 +317,7 @@
         // The full text
         longTextElement.innerHTML = ' Witam Cię w kursie "Inteligentna fabryka pomysłów"! Jestem Szymon Paluch, konsultant strategiczny w obszarze nowoczesnych technologii. W tym kursie nauczę Cię, jak wykorzystać sztuczną inteligencję do generowania pomysłów na treści. Nie musisz znać programowania ani być ekspertem w technologii - wystarczy, że będziesz podążać za moimi instrukcjami. Ten kurs zawiera dużo praktyki i jest skoncentrowany na dostarczeniu Ci wiedzy i dobrych praktyk w jak najprostszy i najszybszy sposób. Przez rozwiązywanie realnego problemu braku pomysłów na treści, nauczysz się, jak działa sztuczna inteligencja i jak wykorzystać ją w swojej codziennej pracy. W kursie omówimy również dobre wzorce rozmowy z asystentem AI oraz przykłady rozmów. Zachęcam Cię do przerabiania materiałów bonusowych, które skupiają się na sztucznej inteligencji. Ten kurs jest przeznaczony dla osób, które chcą zdobyć nowe umiejętności i rozwiązać konkretne problemy w swoim biznesie lub projektach.';
         
-        window.toggleText = function(e) {
+        readMoreBtn.onclick = function(e) {
             e.preventDefault();
             if (longTextElement.style.display === 'none' || longTextElement.style.display === '') {
             longTextElement.style.display = 'block';

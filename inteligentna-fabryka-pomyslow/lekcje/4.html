@@ -317,7 +317,7 @@
         // The full text
         longTextElement.innerHTML = 'Cześć! Dzisiaj chciałam porozmawiać z Wami na temat organizacji treści związanych ze zdrowym stylem życia. Przez ostatni rok zajmowałam się tym tematem i chciałabym podzielić się moimi pomysłami. Wideo będzie dotyczyć głównie treningu i odżywiania, ale będziemy też rozmawiać o popularnych mitach, przydatnych aplikacjach, jak zacząć i najczęstszych błędach. Mam nadzieję, że te pomysły pomogą Wam w organizacji i tworzeniu treści na Waszych kanałach. Zapraszam do oglądania!';
         
-        window.toggleText = function(e) {
+        readMoreBtn.onclick = function(e) {
             e.preventDefault();
             if (longTextElement.style.display === 'none' || longTextElement.style.display === '') {
             longTextElement.style.display = 'block';

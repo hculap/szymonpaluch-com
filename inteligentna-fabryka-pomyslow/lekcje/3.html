@@ -317,7 +317,7 @@
         // The full text
         longTextElement.innerHTML = 'Witaj! W tej lekcji rozmawiamy o technikach kreatywnego myślenia i jak stworzyć proces, który pomoże nam zawsze generować nowe, oryginalne i użyteczne pomysły na treści. Omawiamy problemy związane z twórczością, takie jak generowanie kreatywnych pomysłów i brak konsekwencji. Dzielę się również moimi badaniami na temat kreatywnego myślenia. Definiuję pojęcie "creative thinking" i wyjaśniam, jak balansować między myśleniem kreatywnym a krytycznym. Przykładam dużą wagę do wyboru tematów wejściowych i kategorii, które pomogą nam generować pomysły. Na końcu daję Ci zadanie, abyś samodzielnie rozwinął temat i stworzył tabelę z pomysłami.';
         
-        window.toggleText = function(e) {
+        readMoreBtn.onclick = function(e) {
             e.preventDefault();
             if (longTextElement.style.display === 'none' || longTextElement.style.display === '') {
             longTextElement.style.display = 'block';
