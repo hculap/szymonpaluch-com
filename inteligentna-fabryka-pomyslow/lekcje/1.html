@@ -317,7 +317,8 @@
         // The full text
         longTextElement.innerHTML = ' Witam Cię w kursie "Inteligentna fabryka pomysłów"! Jestem Szymon Paluch, konsultant strategiczny w obszarze nowoczesnych technologii. W tym kursie nauczę Cię, jak wykorzystać sztuczną inteligencję do generowania pomysłów na treści. Nie musisz znać programowania ani być ekspertem w technologii - wystarczy, że będziesz podążać za moimi instrukcjami. Ten kurs zawiera dużo praktyki i jest skoncentrowany na dostarczeniu Ci wiedzy i dobrych praktyk w jak najprostszy i najszybszy sposób. Przez rozwiązywanie realnego problemu braku pomysłów na treści, nauczysz się, jak działa sztuczna inteligencja i jak wykorzystać ją w swojej codziennej pracy. W kursie omówimy również dobre wzorce rozmowy z asystentem AI oraz przykłady rozmów. Zachęcam Cię do przerabiania materiałów bonusowych, które skupiają się na sztucznej inteligencji. Ten kurs jest przeznaczony dla osób, które chcą zdobyć nowe umiejętności i rozwiązać konkretne problemy w swoim biznesie lub projektach.';
         
-        window.toggleText = function() {
+        window.toggleText = function(e) {
+            e.preventDefault();
             if (longTextElement.style.display === 'none' || longTextElement.style.display === '') {
             longTextElement.style.display = 'block';
             shortTextElement.style.display = 'none';
