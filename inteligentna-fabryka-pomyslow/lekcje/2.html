@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <title>Lekcja 1: Wprowadzenie | Kurs "Intligentna Fabryka Pomysłów" </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link href="./landing_marketing_files/styles.min.css" rel="stylesheet" id="sf-custom-css">
+    <style>
+      ::selection {
+        background: #7a94ce;
+      }
+      body {
+        background: rgb(221,219,213);
+        background: -moz-linear-gradient(to top right, rgba(221,219,213,1) 0%, rgba(255,255,255,1) 100%);
+        background: -webkit-linear-gradient(to top right, rgba(221,219,213,1) 0%, rgba(255,255,255,1) 100%);
+        background: linear-gradient(to top right, rgba(221,219,213,1) 0%, rgba(255,255,255,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dddbd5",endColorstr="#ffffff",GradientType=1);
+        min-height: 100vh;
+        text-align: left;
+      }
+      .no-bullet {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      .btn-primary {
+        background-color: #7a94ce; 
+        border-color: #7a94ce;
+        color: #ffffff;
+      }
+      .btn-primary:hover {
+        background-color: #7c7e9c;
+        border-color: #7c7e9c;
+        color: #ffffff;
+
+      }
+      .form-primary {
+        background-color: #ffffff;
+        border-color: #7a94ce;
+      }
+      .c-primary {
+        color: #7a94ce;
+      }
+      .c-cta {
+        color: #dd6567;
+      }
+
+      .scroll-arrow {
+          position: fixed;
+          cursor: pointer;
+          left: 50%;
+          bottom: 160px;
+          animation: pulse 1s infinite;
+          display: none; /* by default the arrow is hidden */
+          text-align: center; /* center the text and the arrows */
+      }
+
+      /* Show the arrow on screens smaller than 992px */
+      @media screen and (max-width: 991px) {
+          .scroll-arrow {
+              display: block;
+          }
+      }
+
+      .scroll-arrow .arrow {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          margin: 0px;
+          transform: translate(0, -10px) rotateZ(45deg);
+          border-bottom: 4px solid #dd6567;
+          border-right: 4px solid #dd6567;
+      }
+
+      .read-more {
+          font-size: 1em;
+          margin-bottom: 0.25em;
+          color: #dd6567;
+          text-shadow: 0px 1px 1px rgba(66, 68, 90, 1);
+      }
+
+      @keyframes pulse {
+          0% { transform: translate(-50%, 0); }
+          50% { transform: translate(-50%, -10px); }
+          100% { transform: translate(-50%, 0); }
+      }
+
+      .author-info {
+          display: flex;
+          align-items: center;
+          margin-top: 1em;
+      }
+
+      .author-photo {
+          width: 50px;  /* adjust as needed */
+          height: 50px;
+          border-radius: 50%;
+          margin-right: 1em;
+          background-color: #7c7e9c;
+      }
+
+      .author-name, .author-position {
+          margin: 0;
+      }
+      .iframe-container {
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+          margin: 0 auto; /* Center the container */
+      }
+
+      .iframe-container iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border: 0;
+      }
+
+      .card {
+        height: 100%;
+        border-radius: 0px;
+      }
+
+      .navigation {
+        background-color: #ffffff;
+        border: 1px solid rgba(39, 40, 42, 0.125);
+      }
+      .author-stars {
+        color: gold;
+      }
+      .video-modal {
+          display: none; 
+          position: fixed; 
+          top: 0; 
+          left: 0; 
+          width: 100%; 
+          height: 100%; 
+          overflow: auto;
+          background-color: rgba(0,0,0,0.7);
+          align-items: center; 
+          justify-content: center; 
+          z-index: 9999999;
+      }
+
+      .modal-content {
+          position: relative; 
+          width: 100%;
+          max-width: 75%; 
+          padding: 0; 
+      }
+
+      video {
+          display: block;
+          width: 100%; 
+          height: auto; 
+          margin: 0 auto; 
+      }
+
+      .close {
+          position: absolute; 
+          right: 8px; 
+          top: 8px; 
+          color: #aaa; 
+          font-size: 28px; 
+          font-weight: bold; 
+          cursor: pointer; 
+          padding: 8px;
+          z-index: 10;
+      }
+
+      .close:hover, .close:focus {
+          color: #fff; 
+          text-decoration: none; 
+          cursor: pointer; 
+      }
+
+      @media screen and (max-width: 768px) {
+          .modal-content {
+              max-width: 100%; 
+          }
+      }
+      #pdf-container {
+          margin: auto;
+          width: 600px;
+          height: 830px;
+          max-width: 100%;
+          border: 1px solid #ccc;
+      }
+
+      #pdf-frame {
+          width: 100%;
+          height: 100%;
+      }
+
+      #navigation {
+        display: none;
+      }
+
+
+    </style>  
+    <script src="https://app.easycart.pl/login.js?type=block&id=prod_OMNARzSrM6GCJS"></script>
+
+    <script>
+        !window._EC_HASH_67596de7bc403a483885dd688487c10a && (location.href = "https://app.easycart.pl/r/prod_OMNARzSrM6GCJS");
+    </script>
+    
+  </head>
+  <body>
+    <noscript>
+        <meta http-equiv="refresh" content="0;url=https://app.easycart.pl/r/prod_OMNARzSrM6GCJS">
+    </noscript>
+    
+    <div class="container">
+
+        <!-- Hero Section -->
+        <section id="hero" class="flex row justify-content-lg-between align-items-center pb-10 pt-10">
+            <div class="col-12">  
+                <h1 class="display-8 text-uppercase text-center fs-1 mb-8">
+                    Inteligentna Fabryka Pomysłów
+                  </h1>
+                  <div style="position: relative; padding-bottom: 56.25%; height: 0;" class="shadow"><iframe src="https://www.loom.com/embed/824861a6fe2645bcb8b24445bff0982b?sid=0341fa8d-65d1-42a5-8b58-9fd09e5b848f" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+                  <div class="flex row justify-content-lg-between">
+                    <div class="col-5 col-lg-3">
+                        <p class="mt-8 mb-4 fs-2 text-center">
+                            <a href="./1" class="btn btn-primary  w-100 rounded-0 text-uppercase shadow">POPRZEDNIA</a>
+                        </p>  
+                    </div>
+                    <div class="col-2">
+                        <p class="mt-8 mb-4 fs-2 text-center">
+                            <a href="./" class="btn btn-primary px-0  w-100 rounded-0 text-uppercase shadow">🏠</a>
+                        </p>  
+                    </div>
+                    <div class="col-5 col-lg-3">
+                        <p class="mt-8 mb-4 fs-2 text-center">
+                            <a href="./3" class="btn btn-primary w-100 rounded-0 text-uppercase shadow">NASTĘPNA</a>
+                        </p> 
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h2 class="display-8 text-uppercase fs-2 mt-6 mb-4">
+                          Lekcja 2: To nie jest kolejny kurs jak pisać instrukcje w ChatGPT
+                        </h2>
+                        <div id="shortText" class="mt-4 mb-1 fs-2">
+                            <!-- Short text here... -->
+                        </div>
+                        <div id="longText" class="mt-4 mb-1 fs-2" style="display:none;">
+                            <!-- Your original long text here... -->
+                        </div>
+                        <a href="#" id="readMoreBtn" onclick="toggleText()" class="mt-1 mb-5 fs-2">Czytaj więcej</a>
+                    </div>
+                    <h2 class="display-8 text-uppercase fs-2 mt-6 mb-4">
+                        Zadania
+                    </h2>
+                    <div id="tasksList" class="pt-2">
+                        <!-- Student Task No 1 -->
+                        <div class="form-check mb-4">
+                            <input class="form-check-input mt-1" type="checkbox" value="" id="task1">
+                            <label class="form-check-label fs-3" for="task1">
+                              Default checkbox
+                            </label>
+                        </div>
+                         <!-- Student Task No 2 -->
+                        <div class="form-check mb-4">
+                            <input class="form-check-input mt-1" type="checkbox" value="" id="task2">
+                            <label class="form-check-label fs-3" for="task2">
+                              Default checkbox
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <h2 class="display-8 text-uppercase fs-2 mt-6 mb-4">
+                        Linki
+                    </h2>
+                    <ul class="mt-lg-3 mb-3 fs-2"> 
+                        <li><a href="https://chat.openai.com/" target="_blank">ChatGPT</a></li>  
+                        <li><a href="https://deepl.com/" target="_blank">DeepL</a></li>
+                        <li><a href="https://platform.openai.com/playground" target="_blank">OpenAI API Playground</a></li>  
+                        <li><a href="https://excalidraw.com/" target="_blank">Excalidraw</a></li>  
+                        <li><a href="https://www.make.com/" target="_blank">Make.com</a></li>  
+                        <li><a href="https://airtable.com/" target="_blank">Airtable</a></li>  
+                    </ul>
+                </div>
+            </div>      
+        </section>
+    </div>        
+
+    <footer class="pb-md-3 py-3 text-center ">
+      <div class="container mb-20">
+        <div class="mt-10 mb-8 border-bottom border-dark-3"></div>
+        <p class="fs-5 mb-0">
+          Copyright © 2023 szymonpaluch.com
+        </p>
+        <p class="fs-5 pb-20">
+          <a href="https://szymonpaluch.com/inteligentna-fabryka-pomyslow/landing_marketing_files/regulamin-swiadczenia-uslug.pdf" target="_blank">Regulamin</a> | 
+          <a href="https://szymonpaluch.com/inteligentna-fabryka-pomyslow/landing_marketing_files/polityka-prywantosci.pdf" target="_blank">Polityka Rrywatności</a>
+        </p>
+      </div>
+    </footer>
+    <script src="./landing_marketing_files/tasks.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const shortTextElement = document.getElementById('shortText');
+        const longTextElement = document.getElementById('longText');
+        const readMoreBtn = document.getElementById('readMoreBtn');
+        
+        // Initial short text, maybe the first sentence or a summary
+        shortTextElement.innerHTML = 'Witaj! W drugiej lekcji naszego kursu "Inteligentna Fabryka Pomysłów" przybliżę Ci, dlaczego ten kurs różni się od innych...';
+        
+        // The full text
+        longTextElement.innerHTML = 'Witaj! W drugiej lekcji naszego kursu "Inteligentna Fabryka Pomysłów" przybliżę Ci, dlaczego ten kurs różni się od innych. Dowiesz się, dlaczego gotowe bazy promptów nie są skutecznym rozwiązaniem i jak wykorzystać narzędzia sztucznej inteligencji do generowania treści dopasowanych do Twojego biznesu. Ten kurs to trzy w jednym: praktyczna wiedza, rozwiązanie problemu generowania treści i narzędzia automatyzujące cały proces. Przygotuj się na odkrycie nowych technik kreatywnego myślenia i generowania dużych ilości treści!';
+        
+        window.toggleText = function(e) {
+            e.preventDefault();
+            if (longTextElement.style.display === 'none' || longTextElement.style.display === '') {
+            longTextElement.style.display = 'block';
+            shortTextElement.style.display = 'none';
+            readMoreBtn.innerHTML = 'Zwiń';
+            } else {
+            longTextElement.style.display = 'none';
+            shortTextElement.style.display = 'block';
+            readMoreBtn.innerHTML = 'Czytaj więcej';
+            }
+        };
+        });
+
+    </script>
+  </body>
+</html>
