@@ -225,32 +225,67 @@
                 <h1 class="display-8 text-uppercase text-center fs-1 mb-8">
                     Inteligentna Fabryka Pomysłów
                   </h1>
-                  <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/83ef802d98de4e25a628976a8986a2e3?sid=97366de8-b56e-418a-bcc7-7693d99af17f" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-                <div class="flex row">
-                    <div class="col-3">
+                  <div style="position: relative; padding-bottom: 56.25%; height: 0;" class="shadow"><iframe src="https://www.loom.com/embed/83ef802d98de4e25a628976a8986a2e3?sid=97366de8-b56e-418a-bcc7-7693d99af17f" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+                <div class="flex row justify-content-lg-between">
+                    <div class="col-5 col-lg-3">
                         <p class="mt-8 mb-4 fs-2 text-center">
                             <a href="#" class="btn btn-primary disabled  w-100 rounded-0 text-uppercase shadow">POPRZEDNIA</a>
                         </p>  
                     </div>
-                    <div class="col-6"></div>
-                    <div class="col-3">
+                    <div class="col-2">
                         <p class="mt-8 mb-4 fs-2 text-center">
-                            <a href="#" class="btn btn-primary w-100 rounded-0 text-uppercase shadow">NASTĘPNA</a>
+                            <a href="./" class="btn btn-primary px-0  w-100 rounded-0 text-uppercase shadow">🏠</a>
+                        </p>  
+                    </div>
+                    <div class="col-5 col-lg-3">
+                        <p class="mt-8 mb-4 fs-2 text-center">
+                            <a href="./2" class="btn btn-primary w-100 rounded-0 text-uppercase shadow">NASTĘPNA</a>
                         </p> 
                     </div>
                 </div>
                 <div>
+                    <div>
+                        <h2 class="display-8 text-uppercase fs-2 mt-6 mb-4">
+                            Lekcja 1: Wprowadzenie
+                        </h2>
+                        <div id="shortText" class="mt-4 mb-1 fs-2">
+                            <!-- Short text here... -->
+                        </div>
+                        <div id="longText" class="mt-4 mb-1 fs-2" style="display:none;">
+                            <!-- Your original long text here... -->
+                        </div>
+                        <a href="#" id="readMoreBtn" onclick="toggleText()" class="mt-1 mb-5 fs-2">Czytaj więcej</a>
+                    </div>
                     <h2 class="display-8 text-uppercase fs-2 mt-6 mb-4">
-                        Lekcja 1: Wprowadzenie
+                        Zadania
                     </h2>
-                    <p class="mt-4 mb-4 fs-2">
-                        Witam Cię w kursie "Inteligentna fabryka pomysłów"! Jestem Szymon Paluch, konsultant strategiczny w obszarze nowoczesnych technologii. W tym kursie nauczę Cię, jak wykorzystać sztuczną inteligencję do generowania pomysłów na treści. Nie musisz znać programowania ani być ekspertem w technologii - wystarczy, że będziesz podążać za moimi instrukcjami. Ten kurs zawiera dużo praktyki i jest skoncentrowany na dostarczeniu Ci wiedzy i dobrych praktyk w jak najprostszy i najszybszy sposób. Przez rozwiązywanie realnego problemu braku pomysłów na treści, nauczysz się, jak działa sztuczna inteligencja i jak wykorzystać ją w swojej codziennej pracy. W kursie omówimy również dobre wzorce rozmowy z asystentem AI oraz przykłady rozmów. Zachęcam Cię do przerabiania materiałów bonusowych, które skupiają się na sztucznej inteligencji. Ten kurs jest przeznaczony dla osób, które chcą zdobyć nowe umiejętności i rozwiązać konkretne problemy w swoim biznesie lub projektach.
-                    </p>
+                    <div id="tasksList" class="pt-2">
+                        <!-- Student Task No 1 -->
+                        <div class="form-check mb-4">
+                            <input class="form-check-input mt-1" type="checkbox" value="" id="task1">
+                            <label class="form-check-label fs-3" for="task1">
+                              Default checkbox
+                            </label>
+                        </div>
+                         <!-- Student Task No 2 -->
+                        <div class="form-check mb-4">
+                            <input class="form-check-input mt-1" type="checkbox" value="" id="task2">
+                            <label class="form-check-label fs-3" for="task2">
+                              Default checkbox
+                            </label>
+                        </div>
+                    </div>
+                    
                     <h2 class="display-8 text-uppercase fs-2 mt-6 mb-4">
-                        Zadanie
+                        Linki
                     </h2>
                     <ul class="mt-lg-3 mb-3 fs-2"> 
-                        <li>Przemyśl cośtam cośtam</li>  
+                        <li><a href="https://chat.openai.com/" target="_blank">ChatGPT</a></li>  
+                        <li><a href="https://deepl.com/" target="_blank">DeepL</a></li>
+                        <li><a href="https://platform.openai.com/playground" target="_blank">OpenAI API Playground</a></li>  
+                        <li><a href="https://excalidraw.com/" target="_blank">Excalidraw</a></li>  
+                        <li><a href="https://www.make.com/" target="_blank">Make.com</a></li>  
+                        <li><a href="https://airtable.com/" target="_blank">Airtable</a></li>  
                     </ul>
                 </div>
             </div>      
@@ -269,5 +304,32 @@
         </p>
       </div>
     </footer>
+    <script src="./landing_marketing_files/tasks.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const shortTextElement = document.getElementById('shortText');
+        const longTextElement = document.getElementById('longText');
+        const readMoreBtn = document.getElementById('readMoreBtn');
+        
+        // Initial short text, maybe the first sentence or a summary
+        shortTextElement.innerHTML = 'Witam Cię w kursie "Inteligentna fabryka pomysłów"! Jestem Szymon Paluch, konsultant strategiczny w obszarze nowoczesnych technologii. W tym kursie nauczę Cię, jak wykorzystać sztuczną inteligencję do generowania pomysłów na treści. Nie musisz znać programowania ani być ekspertem w technologii - wystarczy, że będziesz podążać za moimi instrukcjami...';
+        
+        // The full text
+        longTextElement.innerHTML = ' Witam Cię w kursie "Inteligentna fabryka pomysłów"! Jestem Szymon Paluch, konsultant strategiczny w obszarze nowoczesnych technologii. W tym kursie nauczę Cię, jak wykorzystać sztuczną inteligencję do generowania pomysłów na treści. Nie musisz znać programowania ani być ekspertem w technologii - wystarczy, że będziesz podążać za moimi instrukcjami. Ten kurs zawiera dużo praktyki i jest skoncentrowany na dostarczeniu Ci wiedzy i dobrych praktyk w jak najprostszy i najszybszy sposób. Przez rozwiązywanie realnego problemu braku pomysłów na treści, nauczysz się, jak działa sztuczna inteligencja i jak wykorzystać ją w swojej codziennej pracy. W kursie omówimy również dobre wzorce rozmowy z asystentem AI oraz przykłady rozmów. Zachęcam Cię do przerabiania materiałów bonusowych, które skupiają się na sztucznej inteligencji. Ten kurs jest przeznaczony dla osób, które chcą zdobyć nowe umiejętności i rozwiązać konkretne problemy w swoim biznesie lub projektach.';
+        
+        window.toggleText = function() {
+            if (longTextElement.style.display === 'none' || longTextElement.style.display === '') {
+            longTextElement.style.display = 'block';
+            shortTextElement.style.display = 'none';
+            readMoreBtn.innerHTML = 'Zwiń';
+            } else {
+            longTextElement.style.display = 'none';
+            shortTextElement.style.display = 'block';
+            readMoreBtn.innerHTML = 'Czytaj więcej';
+            }
+        };
+        });
+
+    </script>
   </body>
 </html>
