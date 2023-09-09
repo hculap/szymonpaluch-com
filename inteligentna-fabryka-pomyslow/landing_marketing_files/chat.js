@@ -81,8 +81,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const closeButton = document.getElementById('close-btn');
     const sendButton = document.getElementById('send-btn');
     const inputBox = document.getElementById('input-box');
+    const productId = document.getElementById('chat-container').dataset.productId;
 
-    
 
     chatBubble.addEventListener('click', function() {
         chatWindow.style.display = 'flex';
@@ -154,7 +154,12 @@ document.addEventListener("DOMContentLoaded", function() {
             headers: {
             'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ message: message, previousMessage: previousMessage, previousAnswer: previousAnswer })
+            body: JSON.stringify({ 
+                message: message, 
+                previousMessage: previousMessage, 
+                previousAnswer: previousAnswer,
+                productId: productId
+            })
         })
         .then(response => response.json())
         .then(data => {
