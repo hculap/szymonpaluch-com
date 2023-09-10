@@ -859,5 +859,44 @@
     </script>
     <!-- <script src="./landing_marketing_files/chat.js" type="text/javascript"></script>   -->
     <script src="./landing_marketing_files/demo.js" type="text/javascript"></script> 
+    <script>
+      // Function to capture all query parameters
+      function getAllQueryParameters() {
+        let queryParams = {};
+        let queryString = window.location.search.substring(1);
+        let queryArray = queryString.split('&');
+
+        for (let i = 0; i < queryArray.length; i++) {
+          let pair = queryArray[i].split('=');
+          queryParams[pair[0]] = decodeURIComponent(pair[1]);
+        }
+
+        return queryParams;
+      }
+
+      // Function to append query parameters to specific links (both internal and external)
+      function appendQueryParametersToLinks() {
+        let queryParams = getAllQueryParameters();
+        let links = document.querySelectorAll('a.append-params');
+
+        links.forEach(link => {
+          try {
+            let url = new URL(link.getAttribute('href'), window.location.origin);
+            for (let key in queryParams) {
+              url.searchParams.append(key, queryParams[key]);
+            }
+            link.setAttribute('href', url.toString());
+          } catch (e) {
+            // Handle invalid URLs or other exceptions if needed
+            console.error("Couldn't process URL: ", link.getAttribute('href'), e);
+          }
+        });
+      }
+
+      // Append query parameters to specific links when the page is loaded
+      window.addEventListener('load', function() {
+        appendQueryParametersToLinks();
+      });
+    </script>
   </body>
 </html>
