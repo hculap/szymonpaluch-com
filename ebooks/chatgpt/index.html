@@ -877,7 +877,7 @@
       // Function to append query parameters to specific links (both internal and external)
       function appendQueryParametersToLinks() {
         let queryParams = getAllQueryParameters();
-        let links = document.querySelectorAll('a.append-params');
+        let links = document.querySelectorAll('a');
 
         links.forEach(link => {
           try {
