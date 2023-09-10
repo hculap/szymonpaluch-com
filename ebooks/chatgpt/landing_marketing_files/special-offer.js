@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const timeDifferenceMinutes = (currentTime - pageLoadTime) / 1000 / 60;
   
     // 2. Remove the specialOffer section if more than 60 minutes have passed
-    if (timeDifferenceMinutes >= 60) {
+    if (timeDifferenceMinutes >= 30) {
       const specialOfferSection = document.getElementById('specialOffer');
       if (specialOfferSection) {
         specialOfferSection.remove();
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
     function updateCounter() {
       const currentTime = new Date().getTime();
-      const timeLeftSeconds = 60 * 60 - (currentTime - pageLoadTime) / 1000;
+      const timeLeftSeconds = 60 * 30 - (currentTime - pageLoadTime) / 1000;
       
       if (timeLeftSeconds <= 0) {
         // 4. Remove the specialOffer section after 60 minutes
