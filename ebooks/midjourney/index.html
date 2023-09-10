@@ -833,6 +833,21 @@
       // Function to append query parameters to specific links (both internal and external)
       function appendQueryParametersToLinks() {
         let queryParams = getAllQueryParameters();
+
+
+        // Remove empty keys
+        for (let key in queryParams) {
+          if (key === '') {
+            delete queryParams[key];
+          }
+        }
+        
+        // Early return if no query parameters are present
+        if (Object.keys(queryParams).length === 0) {
+          return;
+        }
+
+
         let links = document.querySelectorAll('a');
 
         links.forEach(link => {
