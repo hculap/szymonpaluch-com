@@ -264,16 +264,22 @@
                         <div class="form-check mb-4">
                             <input class="form-check-input mt-1" type="checkbox" value="" id="task1">
                             <label class="form-check-label fs-3" for="task1">
-                              Default checkbox
+                              Oglądnij lekcję
                             </label>
                         </div>
                          <!-- Student Task No 2 -->
                         <div class="form-check mb-4">
                             <input class="form-check-input mt-1" type="checkbox" value="" id="task2">
                             <label class="form-check-label fs-3" for="task2">
-                              Default checkbox
+                              Zapoznaj się z materiałami dodatkowymi (3 ebooki)
                             </label>
                         </div>
+                        <div class="form-check mb-4">
+                          <input class="form-check-input mt-1" type="checkbox" value="" id="task2">
+                          <label class="form-check-label fs-3" for="task2">
+                              Dołącz do grupy na FB
+                          </label>
+                      </div>
                     </div>
                     
                     <h2 class="display-8 text-uppercase fs-2 mt-6 mb-4">
@@ -312,10 +318,10 @@
         const readMoreBtn = document.getElementById('readMoreBtn');
         
         // Initial short text, maybe the first sentence or a summary
-        shortTextElement.innerHTML = 'Witam Cię w kursie "Inteligentna fabryka pomysłów"! Jestem Szymon Paluch, konsultant strategiczny w obszarze nowoczesnych technologii. W tym kursie nauczę Cię, jak wykorzystać sztuczną inteligencję do generowania pomysłów na treści. Nie musisz znać programowania ani być ekspertem w technologii - wystarczy, że będziesz podążać za moimi instrukcjami...';
+        shortTextElement.innerHTML = 'W tej pierwszejpodstawowej lekcji kursu "Inteligentna Fabryka pomysłów" poznasz swojego instruktora, Szymona Palucha, doświadczonego konsultanta strategicznego w zakresie nowoczesnych technologii. Szymon przedstawi cele kursu, koncentrując się na tym, jak wykorzystać sztuczną inteligencję do generowania atrakcyjnych pomysłów na treści...';
         
         // The full text
-        longTextElement.innerHTML = ' Witam Cię w kursie "Inteligentna fabryka pomysłów"! Jestem Szymon Paluch, konsultant strategiczny w obszarze nowoczesnych technologii. W tym kursie nauczę Cię, jak wykorzystać sztuczną inteligencję do generowania pomysłów na treści. Nie musisz znać programowania ani być ekspertem w technologii - wystarczy, że będziesz podążać za moimi instrukcjami. Ten kurs zawiera dużo praktyki i jest skoncentrowany na dostarczeniu Ci wiedzy i dobrych praktyk w jak najprostszy i najszybszy sposób. Przez rozwiązywanie realnego problemu braku pomysłów na treści, nauczysz się, jak działa sztuczna inteligencja i jak wykorzystać ją w swojej codziennej pracy. W kursie omówimy również dobre wzorce rozmowy z asystentem AI oraz przykłady rozmów. Zachęcam Cię do przerabiania materiałów bonusowych, które skupiają się na sztucznej inteligencji. Ten kurs jest przeznaczony dla osób, które chcą zdobyć nowe umiejętności i rozwiązać konkretne problemy w swoim biznesie lub projektach.';
+        longTextElement.innerHTML = 'W tej pierwszejpodstawowej lekcji kursu "Inteligentna Fabryka pomysłów" poznasz swojego instruktora, Szymona Palucha, doświadczonego konsultanta strategicznego w zakresie nowoczesnych technologii. Szymon przedstawi cele kursu, koncentrując się na tym, jak wykorzystać sztuczną inteligencję do generowania atrakcyjnych pomysłów na treści. Kurs jest przeznaczony dla osób zainteresowanych wykorzystaniem sztucznej inteligencji do rozwiązywania konkretnych problemów w swoich firmach lub kreatywnych projektach. Niezależnie od tego, czy jesteś właścicielem firmy, twórcą treści, czy po prostu jesteś ciekawy zastosowań sztucznej inteligencji, znajdziesz wartość w tym kursie. Pod koniec tej lekcji będziesz mieć jasne zrozumienie tego, co kurs ma na celu, dla kogo jest przeznaczony i rzeczywisty problem generowania pomysłów na treści, który zamierzamy wspólnie rozwiązać. Poznasz również strukturę kursu i dowiesz się, czego możesz się spodziewać w kolejnych lekcjach. Czy jesteś gotowy, aby wyruszyć w tę ekscytującą podróż do świata sztucznej inteligencji i tworzenia treści? Zaczynajmy!';
         
         readMoreBtn.onclick = function(e) {
             e.preventDefault();
