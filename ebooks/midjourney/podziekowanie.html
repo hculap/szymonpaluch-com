@@ -103,24 +103,6 @@
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '226957853624203');
       fbq('track', 'PageView');
-
-      // Unique identifier for the product, could be SKU or Product ID
-      var productID = 'price_1NnLVyA5a1jsPgZ2JRA9orOc';
-
-      // Check if the purchase event for this specific product has already been fired
-      if (!localStorage.getItem('purchaseTracked_' + productID)) {
-        fbq('track', 'Purchase', {
-          content_name: 'Pakiet ChatGPT & MidJourney - Najlepsze praktyki', 
-          content_category: 'ebook',
-          content_ids: [productID],
-          content_type: 'product',
-          value: 159.0,
-          currency: 'PLN' 
-        });
-
-        // Mark the purchase event for this specific product as tracked
-        localStorage.setItem('purchaseTracked_' + productID, 'true');
-      }
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=226957853624203&ev=Purchase&noscript=1"

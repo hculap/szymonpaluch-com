@@ -869,56 +869,5 @@
         appendQueryParametersToLinks();
       });
     </script>
-    <script>
-      var ebookChatGPT = {
-        content_name: 'Skutecznia Rozmowa z ChatGPT – Najlepsze praktyki korzystania z asystenta AI', 
-        content_category: 'ebook',
-        content_ids: ['price_1NnLVyA5a1jsPgZ2JRA9orOc'],
-        content_type: 'product',
-        value: 99.0,
-        currency: 'PLN' 
-      };
-      var ebookPackage = {
-        content_name: 'Pakiet ChatGPT & MidJourney - Najlepsze praktyki', 
-        content_category: 'ebook',
-        content_ids: ['price_1NnLVyA5a1jsPgZ2JRA9orOc'],
-        content_type: 'product',
-        value: 159.0,
-        currency: 'PLN' 
-      };
-
-      function trackAddToCart(item) {
-        try {
-          fbq('track', 'AddToCart', item);
-        } catch (error) {
-          console.error('Failed to track AddToCart event:', error);
-        }
-      }
-    
-      document.addEventListener('DOMContentLoaded', function() {
-        var linksChatGPT = document.querySelectorAll('a.track-add-to-cart-chatgpt');
-        var linksPackage = document.querySelectorAll('a.track-add-to-cart-package');
-        linksChatGPT.forEach(function(link) {
-          link.addEventListener('click', function(event) {
-            event.preventDefault();
-            trackAddToCart(ebookChatGPT);
-    
-            setTimeout(function() {
-              window.location.href = link.href;
-            }, 200);
-          });
-        });
-        linksPackage.forEach(function(link) {
-          link.addEventListener('click', function(event) {
-            event.preventDefault();
-            trackAddToCart(ebookPackage);
-    
-            setTimeout(function() {
-              window.location.href = link.href;
-            }, 200);
-          });
-        });
-      });
-    </script>
   </body>
 </html>
