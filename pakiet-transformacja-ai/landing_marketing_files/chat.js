@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
         chatBody.appendChild(newMessageDiv);
     };
 
-    firstMessage = 'Cześć! Czy mogę Ci pomóc uzyskać informacje dotyczące kursu "Inteligentna Fabryka Pomysłów"?';
+    firstMessage = 'Cześć! Czy mogę Ci pomóc uzyskać informacje dotyczące tego produktu?';
     appendMessageToChat(firstMessage,  'message-left');
     
 
