@@ -1,0 +1,60 @@
+.chat-bubble {
+    z-index: 99999999;
+}
+.chat-window {
+    z-index: 99999999;
+    width: 400px;
+    height: 500px;
+}
+.card-header {
+    background-color: #7a94ce;
+    color: #fff;
+}
+.chat-body {
+    max-height: 400px;
+    overflow-y: auto;
+}
+.message-time {
+    font-size: 12px;
+    color: #555;
+}
+.message-right {
+    text-align: right;
+}
+.message-left {
+    text-align: left;
+    background-color: rgba(39, 40, 42, 0.03);
+}
+.typing-indicator {
+    background-color: #eee;
+    animation: typingFlash 1s infinite;
+}
+@keyframes typingFlash {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+@media (max-width: 768px) {
+    .chat-window {
+        width: 100vw;
+        height: 50vh;
+        position: fixed;
+    }
+}
+.card {
+    height: 100%;
+    border-radius: 0px;
+}   
+  
+.btn-primary {
+    background-color: #7a94ce;
+    border-color: #7a94ce;
+    color: #ffffff;
+  }
+
+  .btn-primary:hover {
+    background-color: #7c7e9c;
+    border-color: #7c7e9c;
+    color: #ffffff;
+
+  } 
