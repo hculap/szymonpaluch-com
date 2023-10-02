@@ -250,33 +250,18 @@
           scrollArrow.style.visibility = 'hidden';
       });
     </script>
-    <script type="text/javascript">
-      // Function to get a specific query parameter's value
-      function getQueryParam(name) {
-          const results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.search);
-          return results ? decodeURIComponent(results[1]) : null;
-      }
 
-      // Get the UTM parameters and store them only if they are set
-      const utm_parameters = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
-      for (let param of utm_parameters) {
-          const value = getQueryParam(param);
-          if (value) {
-              localStorage.setItem(param, value);
-          }
-      }
-    </script>
 
-<script>
+<!-- <script>
   function ml_webform_success_7328165() {
     var $ = ml_jQuery || jQuery;
     window.location = 'https://szymonpaluch.com/content-ai/podziekowanie'
   }
-</script>
+</script> -->
 
-    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v1f25ee4b05f240a833e02c19975434a4" type="text/javascript"></script>
+    <!-- <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v1f25ee4b05f240a833e02c19975434a4" type="text/javascript"></script>
     <script>
         fetch("https://assets.mailerlite.com/jsonp/500457/forms/97758355644221137/track-view")
-    </script>
+    </script> -->
   </body>
 </html>
